@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>kaitlyn liu</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        
+        <section class="gradient-background">
+            <div class="noise"></div>
+            <div class="overlay"></div>
+            
+            <nav>
+                <ul>
+                    <li><a href="aboutme.html">about me</a></li>
+                    <li><a href="art.html">art</a></li>
+                    <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">linkedin</a></li>
+                    <li><a href="resume.pdf" target="_blank">resume</a></li>
+                </ul>
+            </nav> 
+
+            <h1>hi! i'm kaitlyn ꒰ᐢ. .ᐢ꒱₊˚⊹ a uw hcde student designing with intention and currently on the search for the best soft serveᯓ i'm exploring how data, psychology, and creativity blend to create experiences that truly connect with people ₊˚࿔</h1>
+
+                <hr>
+
+                <h4>case studies ↓</h4> 
+
+            <hr class="solid">
+        </section>
+
+        <div class="card-container">
+            <a href="hcde308.html" style="text-decoration: none; color: inherit;">
+            <div class="card">
+                <!--<img src="final altitude.png" alt="food and drink festival" style="width: 100%">-->
+                <p class="card-description">food and drink festival</p>
+                <div class="card-content">
+                    <h2><b>altitude</b></h2>
+                    <div class="card-line"></div>
+                    <p class="card-date">2024</p>
+                </div>
+            </div>
+            </a>
+
+            <a href="colorblind.html" style="text-decoration: none; color: inherit;">
+            <div class="card">
+                <!--<img src="colorblind.png" alt="colorblind storyboard" style="width: 100%">-->
+                <p class="card-description">description</p>
+                <div class="card-content">
+                    <h2><b>colorblind</b></h2>
+                    <div class="card-line"></div>
+                    <p class="card-date">2024</p>
+                </div>
+            </div>
+            </a>
+
+            <a href="gamedesign.html" style="text-decoration: none; color: inherit;">
+                <div class="card">
+                    <p class="card-description">sustainability game</p>
+                    <div class="card-content">
+                        <h2><b>game design</b></h2>
+                        <div class="card-line"></div>
+                        <p class="card-date">2024</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="graphic-design.html" style="text-decoration: none; color: inherit;">
+                <div class="card">
+                    <!--<img src="colorblind.png" alt="colorblind storyboard" style="width: 100%">-->
+                    <p class="card-description">description</p>
+                    <div class="card-content">
+                        <h2><b>vsa graphic design</b></h2>
+                        <div class="card-line"></div>
+                        <p class="card-date">2024</p>
+                    </div>
+                </div>
+                </a>
+        </div>
+
+    
+
+        <script>
+            // mouse tracking for gradient effect
+            document.addEventListener('DOMContentLoaded', function() {
+                const noiseElement = document.querySelector('.noise');
+                
+                // Current position of the gradient
+                let currentX = 50;
+                let currentY = 50;
+                
+                // Target position (where the mouse is)
+                let targetX = 50;
+                let targetY = 50;
+                
+                // Smoothing factor (lower = slower movement)
+                const smoothingFactor = 0.02;
+                
+                const moveGradient = (event) => {
+                    const winWidth = window.innerWidth;
+                    const winHeight = window.innerHeight;
+
+                    // Calculate target position based on mouse
+                    targetX = Math.round(event.pageX / winWidth * 100);
+                    targetY = Math.round(event.pageY / winHeight * 100);
+                };
+                
+                // Animation loop for smooth movement
+                const animateGradient = () => {
+                    // Interpolate current position towards target
+                    currentX += (targetX - currentX) * smoothingFactor;
+                    currentY += (targetY - currentY) * smoothingFactor;
+                    
+                    // Apply the interpolated position
+                    if(noiseElement) {
+                        noiseElement.style.setProperty('--mouse-x', currentX.toString() + "%");
+                        noiseElement.style.setProperty('--mouse-y', currentY.toString() + "%");
+                    }
+                    
+                    // Continue animation
+                    requestAnimationFrame(animateGradient);
+                };
+
+                document.addEventListener('mousemove', moveGradient);
+                
+                // Start the animation loop
+                animateGradient();
+            });
+        </script> 
+    </body>
+</html>
