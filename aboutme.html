@@ -4,6 +4,12 @@
         <title>kaitlyn liu</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://use.typekit.net/ufm8mvs.css">
+
+        <!-- Preload critical above-the-fold images -->
+        <link rel="preload" as="image" href="images/webp/medium/porfolio pic.webp" type="image/webp">
+        <link rel="preload" as="image" href="images/webp/medium/hammock pic.webp" type="image/webp">
+        <link rel="preload" as="image" href="polaroid frame.png">
+        <link rel="preload" as="image" href="creampuff.png">
     </head>
 
     <body>
@@ -25,9 +31,25 @@
 
             <div class="profile-container">
                 <div class="scrapbook-photos">
-                    <img src="porfolio pic.JPG" alt="profile picture" class="portfolio-photo">
+                    <picture>
+                        <source
+                            type="image/webp"
+                            srcset="images/webp/small/porfolio pic.webp 400w,
+                                    images/webp/medium/porfolio pic.webp 800w,
+                                    images/webp/large/porfolio pic.webp 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+                        <img src="images/optimized/porfolio pic.JPG" alt="profile picture" class="portfolio-photo">
+                    </picture>
                     <div class="hammock-group">
-                        <img src="hammock pic.jpg" alt="camping hammock" class="hammock-photo">
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="images/webp/small/hammock pic.webp 400w,
+                                        images/webp/medium/hammock pic.webp 800w,
+                                        images/webp/large/hammock pic.webp 1200w"
+                                sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+                            <img src="images/optimized/hammock pic.jpg" alt="camping hammock" class="hammock-photo">
+                        </picture>
                         <img src="polaroid frame.png" alt="polaroid frame" class="polaroid-frame">
                     </div>
                 </div>
@@ -57,101 +79,173 @@
             <div class="image-carousel">
                 <!-- First set of images -->
                 <div class="carousel-item">
-                    <img src="indigo cow.jpg" alt="indigo cow">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/indigo cow.webp 400w, images/webp/medium/indigo cow.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/indigo cow.jpg" alt="indigo cow" loading="lazy">
+                    </picture>
                     <p class="carousel-description">indigo cow</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="joie.jpg" alt="joie">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/joie.webp 400w, images/webp/medium/joie.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/joie.jpg" alt="joie" loading="lazy">
+                    </picture>
                     <p class="carousel-description">joie</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="tendon.jpg" alt="tendon kohaku">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/tendon.webp 400w, images/webp/medium/tendon.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/tendon.jpg" alt="tendon kohaku" loading="lazy">
+                    </picture>
                     <p class="carousel-description">tendon kohaku</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="bennies.jpg" alt="many bennies">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/bennies.webp 400w, images/webp/medium/bennies.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/bennies.jpg" alt="many bennies" loading="lazy">
+                    </picture>
                     <p class="carousel-description">many bennies</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="yoka.jpg" alt="yoka">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/yoka.webp 400w, images/webp/medium/yoka.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/yoka.jpg" alt="yoka" loading="lazy">
+                    </picture>
                     <p class="carousel-description">yoka</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="yoka-pt2.jpg" alt="yoka pt2">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/yoka-pt2.webp 400w, images/webp/medium/yoka-pt2.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/yoka-pt2.jpg" alt="yoka pt2" loading="lazy">
+                    </picture>
                     <p class="carousel-description">yoka..again</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="singtong.jpg" alt="sing tong thai">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/singtong.webp 400w, images/webp/medium/singtong.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/singtong.jpg" alt="sing tong thai" loading="lazy">
+                    </picture>
                     <p class="carousel-description">sing tong thai matcha</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="canuc.jpg" alt="canuc">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/canuc.webp 400w, images/webp/medium/canuc.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/canuc.jpg" alt="canuc" loading="lazy">
+                    </picture>
                     <p class="carousel-description">cafe canuc</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="momiji.jpg" alt="momiji">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/momiji.webp 400w, images/webp/medium/momiji.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/momiji.jpg" alt="momiji" loading="lazy">
+                    </picture>
                     <p class="carousel-description">momiji</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="rachels ginger beer.jpg" alt="rachel's ginger beer">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/rachels ginger beer.webp 400w, images/webp/medium/rachels ginger beer.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/rachels ginger beer.jpg" alt="rachel's ginger beer" loading="lazy">
+                    </picture>
                     <p class="carousel-description">rachel's ginger beer</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="cassetta.jpg" alt="cassetta popup">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/cassetta.webp 400w, images/webp/medium/cassetta.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/cassetta.jpg" alt="cassetta popup" loading="lazy">
+                    </picture>
                     <p class="carousel-description">cassetta popup</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="potato-stick.jpg" alt="potato stick">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/potato-stick.webp 400w, images/webp/medium/potato-stick.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/potato-stick.jpg" alt="potato stick" loading="lazy">
+                    </picture>
                     <p class="carousel-description">bite of seattle</p>
                 </div>
-              
+
                   <!-- duplicate set for seamless loop -->
                 <div class="carousel-item">
-                    <img src="indigo cow.jpg" alt="indigo cow">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/indigo cow.webp 400w, images/webp/medium/indigo cow.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/indigo cow.jpg" alt="indigo cow" loading="lazy">
+                    </picture>
                     <p class="carousel-description">indigo cow</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="joie.jpg" alt="joie">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/joie.webp 400w, images/webp/medium/joie.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/joie.jpg" alt="joie" loading="lazy">
+                    </picture>
                     <p class="carousel-description">joie</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="tendon.jpg" alt="tendon kohaku">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/tendon.webp 400w, images/webp/medium/tendon.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/tendon.jpg" alt="tendon kohaku" loading="lazy">
+                    </picture>
                     <p class="carousel-description">tendon kohaku</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="bennies.jpg" alt="many bennies">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/bennies.webp 400w, images/webp/medium/bennies.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/bennies.jpg" alt="many bennies" loading="lazy">
+                    </picture>
                     <p class="carousel-description">many bennies</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="yoka.jpg" alt="yoka">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/yoka.webp 400w, images/webp/medium/yoka.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/yoka.jpg" alt="yoka" loading="lazy">
+                    </picture>
                     <p class="carousel-description">yoka</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="yoka-pt2.jpg" alt="yoka pt2">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/yoka-pt2.webp 400w, images/webp/medium/yoka-pt2.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/yoka-pt2.jpg" alt="yoka pt2" loading="lazy">
+                    </picture>
                     <p class="carousel-description">yoka..again</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="singtong.jpg" alt="sing tong thai">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/singtong.webp 400w, images/webp/medium/singtong.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/singtong.jpg" alt="sing tong thai" loading="lazy">
+                    </picture>
                     <p class="carousel-description">sing tong thai matcha</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="canuc.jpg" alt="canuc">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/canuc.webp 400w, images/webp/medium/canuc.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/canuc.jpg" alt="canuc" loading="lazy">
+                    </picture>
                     <p class="carousel-description">cafe canuc</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="momiji.jpg" alt="momiji">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/momiji.webp 400w, images/webp/medium/momiji.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/momiji.jpg" alt="momiji" loading="lazy">
+                    </picture>
                     <p class="carousel-description">momiji</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="rachels ginger beer.jpg" alt="rachel's ginger beer">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/rachels ginger beer.webp 400w, images/webp/medium/rachels ginger beer.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/rachels ginger beer.jpg" alt="rachel's ginger beer" loading="lazy">
+                    </picture>
                     <p class="carousel-description">rachel's ginger beer</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="cassetta.jpg" alt="cassetta popup">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/cassetta.webp 400w, images/webp/medium/cassetta.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/cassetta.jpg" alt="cassetta popup" loading="lazy">
+                    </picture>
                     <p class="carousel-description">cassetta popup</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="potato-stick.jpg" alt="potato stick">
+                    <picture>
+                        <source type="image/webp" srcset="images/webp/small/potato-stick.webp 400w, images/webp/medium/potato-stick.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="images/optimized/potato-stick.jpg" alt="potato stick" loading="lazy">
+                    </picture>
                     <p class="carousel-description">bite of seattle</p>
                 </div>
             </div>
