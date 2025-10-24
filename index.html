@@ -95,47 +95,96 @@
             // mouse tracking for gradient effect
             document.addEventListener('DOMContentLoaded', function() {
                 const noiseElement = document.querySelector('.noise');
-                
+
+                // Early exit if element doesn't exist
+                if (!noiseElement) return;
+
+                // Configuration constants
+                const SMOOTHING_FACTOR = 0.02; // Controls animation speed (lower = slower, smoother)
+                const STOP_THRESHOLD = 0.1;    // Distance threshold to stop animation (in percentage)
+                const THROTTLE_MS = 16;        // Throttle to ~60fps (1000ms / 60fps ≈ 16ms)
+
                 // Current position of the gradient
                 let currentX = 50;
                 let currentY = 50;
-                
+
                 // Target position (where the mouse is)
                 let targetX = 50;
                 let targetY = 50;
-                
-                // Smoothing factor (lower = slower movement)
-                const smoothingFactor = 0.02;
-                
+
+                // Cached window dimensions
+                let winWidth = window.innerWidth;
+                let winHeight = window.innerHeight;
+
+                // Animation state
+                let isAnimating = false;
+                let animationId = null;
+
+                // Throttle state
+                let lastMoveTime = 0;
+
+                // Update cached dimensions on resize
+                const handleResize = () => {
+                    winWidth = window.innerWidth;
+                    winHeight = window.innerHeight;
+                };
+
                 const moveGradient = (event) => {
-                    const winWidth = window.innerWidth;
-                    const winHeight = window.innerHeight;
+                    // Throttle mousemove to ~60fps
+                    const now = performance.now();
+                    if (now - lastMoveTime < THROTTLE_MS) return;
+                    lastMoveTime = now;
 
                     // Calculate target position based on mouse
                     targetX = Math.round(event.pageX / winWidth * 100);
                     targetY = Math.round(event.pageY / winHeight * 100);
+
+                    // Start animation if not already running
+                    if (!isAnimating) {
+                        isAnimating = true;
+                        animateGradient();
+                    }
                 };
-                
+
                 // Animation loop for smooth movement
                 const animateGradient = () => {
                     // Interpolate current position towards target
-                    currentX += (targetX - currentX) * smoothingFactor;
-                    currentY += (targetY - currentY) * smoothingFactor;
-                    
+                    currentX += (targetX - currentX) * SMOOTHING_FACTOR;
+                    currentY += (targetY - currentY) * SMOOTHING_FACTOR;
+
                     // Apply the interpolated position
-                    if(noiseElement) {
-                        noiseElement.style.setProperty('--mouse-x', currentX.toString() + "%");
-                        noiseElement.style.setProperty('--mouse-y', currentY.toString() + "%");
+                    noiseElement.style.setProperty('--mouse-x', currentX + "%");
+                    noiseElement.style.setProperty('--mouse-y', currentY + "%");
+
+                    // Check if we're close enough to the target to stop animating
+                    const distanceX = Math.abs(targetX - currentX);
+                    const distanceY = Math.abs(targetY - currentY);
+
+                    if (distanceX > STOP_THRESHOLD || distanceY > STOP_THRESHOLD) {
+                        // Continue animation
+                        animationId = requestAnimationFrame(animateGradient);
+                    } else {
+                        // Stop animation when close enough
+                        isAnimating = false;
+                        if (animationId !== null) {
+                            cancelAnimationFrame(animationId);
+                            animationId = null;
+                        }
                     }
-                    
-                    // Continue animation
-                    requestAnimationFrame(animateGradient);
                 };
 
+                // Add event listeners
                 document.addEventListener('mousemove', moveGradient);
-                
-                // Start the animation loop
-                animateGradient();
+                window.addEventListener('resize', handleResize);
+
+                // Cleanup function (useful for SPAs or hot reloading)
+                window.addEventListener('beforeunload', () => {
+                    document.removeEventListener('mousemove', moveGradient);
+                    window.removeEventListener('resize', handleResize);
+                    if (animationId !== null) {
+                        cancelAnimationFrame(animationId);
+                    }
+                });
             });
         </script> 
     </body>
