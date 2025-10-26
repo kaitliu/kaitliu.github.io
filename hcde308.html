@@ -6,32 +6,38 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
 
+        <a href="index.html" class="logo">kaityliu</a>
+
         <nav>
             <ul>
-                <li><a href="aboutme.html">about me</a></li>
-                <li><a href="art.html">art</a></li>
-                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">linkedin</a></li>
-                <li><a href="resume.pdf" target="_blank">resume</a></li>
+                <li><a href="aboutme.html">ABOUT ME</a></li>
+                <!-- <li><a href="art.html">ART</a></li> -->
+                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
+                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
             </ul>
         </nav> 
 
         <div class="project-header">
-            <h1>Altitude</h1>
-            <h2>Food and Drink Festival</h2>
+            <img src="assets/logos/altitude_logo.png" alt="Altitude" style="max-width: 300px; height: auto; display: block; margin: 0 auto;">
+            <!-- <img src="mobile_altitude.png" alt="Altitude Mobile" style="max-width: 150px; height: auto; margin-top: 15px;">
+            <img src="assets/logos/croissant.png" alt="Croissant" style="max-width: 200px; height: auto; margin-left: 20px;">
+            <h2>Food and Drink Festival</h2> -->
         </div>
 
         <nav class="section-nav">
             <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#prototyping">Prototyping</a></li>
-                <li><a href="#app-design">App Design</a></li>
-                <li><a href="#mobile-interface">Mobile Interface</a></li>
+                <li><a href="#overview">OVERVIEW</a></li>
+                <li><a href="#research">RESEARCH</a></li>
+                <li><a href="#design">DESIGN</a></li>
+                <li><a href="#prototyping">PROTOTYPING</a></li>
+                <li><a href="#mobile-interface">MOBILE INTERFACE</a></li>
+                <li><a href="#reflection">REFLECTION</a></li>
             </ul>
         </nav>
 
@@ -59,27 +65,30 @@
             <div class="project-section" id="overview">
                 <div class="project-heading">
                     <h2>Overview</h2>
+                    <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <p>The design challenge was to design a visual identity for a festival on the University of Washington campus. We were given 10 weeks to create a wordmark, poster, app, etc. each separated into weekly briefs or exercises. I chose to focus on making a food and drink festival that help food lovers discover hidden gems around Seattle. My core value proposition is to help foodies rise above the usual food scene and be more exploratory. The unique selling point of this festival is that unlike typical large scale food events, this festival provides an area where smaller and opening businesses can gain more exposure and food food enthusiasts to find a niche set of vendors and smaller businesses waiting to be discovered.</p>
+                    <p>The design challenge was to design a visual identity for a festival hosted on the University of Washington campus. Over the course of 10 weeks, I developed a cohesive brand system—including a wordmark, poster, and app—through a series of weekly design briefs and exercises. I chose to design a food and drink festival that celebrates local cuisine and helps food lovers discover hidden gems around Seattle. The core value proposition is to encourage foodies to rise above the familiar food scene and explore more unique, lesser-known spots. Unlike large-scale commercial food events, this festival focuses on providing a platform for small and emerging businesses to gain exposure, while offering attendees the chance to experience a curated selection of niche vendors waiting to be discovered.</p>
                 </div>
             </div>
 
             <div class="project-section" id="research">
                 <div class="project-heading">
                     <h2>Research</h2>
+                    <hr class="section-hr">
                 </div>
                 <div class="project-content">
                     <h3>Competitor Analysis</h3>
+                    <p>An analysis was done over 3 different well known food and drink festivals: C-ID Night Market, Bite of Seattle, and Seattle Cocktail Week, to understand and compare the features of each festival and how they differ from each other.</p>
                     <table>
                         <tr>
                             <th></th>
                             <th>C-ID Night Market</th>
                             <th>Bite of Seattle
-                                <img src="bos-logo.png" alt="Bite of Seattle" style="width: 60%" loading="lazy">
+                                <img src="assets/logos/bos-logo.png" alt="Bite of Seattle" style="width: 60%" loading="lazy">
                             </th>
                             <th>Seattle Cocktail Week
-                                <img src="cocktailweek-logo.png" alt="Seattle Cocktail Week" style="width: 60%" loading="lazy">
+                                <img src="assets/logos/cocktailweek-logo.png" alt="Seattle Cocktail Week" style="width: 60%" loading="lazy">
                             </th>
                             <th>Altitude</th>
                         </tr>
@@ -145,6 +154,12 @@
                         
                     </table>
                     <h3>Personas</h3>
+                    <p>Three participants were interviewed to understand their food and drink preferences, their experience with food festivals, and their thoughts on the design of the festival.</p>
+                    <div style="display: flex; flex-direction: column; gap: 20px; align-items: center; margin: 20px 0;">
+                        <img src="persona1.png" alt="Persona 1" style="max-width: 600px; height: auto; border: 1px solid #ccc;" loading="lazy">
+                        <img src="persona2.png" alt="Persona 2" style="max-width: 600px; height: auto; border: 1px solid #ccc;" loading="lazy">
+                        <img src="persona3.png" alt="Persona 3" style="max-width: 600px; height: auto; border: 1px solid #ccc;" loading="lazy">
+                    </div>
                 </div>
             </div>
 
@@ -152,16 +167,38 @@
             <div class="project-section" id="design">
                 <div class="project-heading">
                     <h2>Design</h2>
+                    <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <!-- Content for wordmark will go here -->
-                    <h3>Wordmark</h3>
-                    <h3>Moodboard</h3>
-                    <img src="moodboard.png" alt="moodboard" style="width: 60%; border: 1px solid #ccc;" loading="lazy">
                     <h3>Typography</h3>
                     <p class="darumadrop-one-regular">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 1 2 3 4 5 6 7 8 9 0 !@#$%^&*()_+{}:"<>?</p>
+                    
+                    <h3>Wordmark</h3>
+                    <p>The wordmark uses Darumadrop One, a rounded display typeface whose soft, irregular edges establish a playful and approachable personality. The imperfect letterforms and hand drawn doodles on each side personify the festival's mission of connecting food enthusiasts with niche vendors.</p>
+                    <div style="display: flex; gap: 20px; align-items: flex-start; justify-content: center; flex-wrap: wrap; border: 1px solid #ccc; background: #f5f5f5; padding: 30px; margin: 20px 0;">
+                        <img src="assets/logos/altitude_logo.png" alt="Altitude Wordmark" style="max-width: 250px; height: auto;" loading="lazy">
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <img src="wordmark_iteration1.png" alt="Wordmark Iteration 1" style="max-width: 150px; height: auto;" loading="lazy">
+                            <img src="wordmark_iteration2.png" alt="Wordmark Iteration 2" style="max-width: 150px; height: auto;" loading="lazy">
+                        </div>
+                    </div>
+                    <h3>Moodboard</h3>
+                    <p>The moodboard depicts images that invoke a inviting, calming, and small-scale feeling with simpler design. The playful graphic elements (the simple illustrated cat, hand-drawn napkin designs, and fun typography style) share the same approachable, slightly imperfect quality as the Darumadrop One wordmark representing the core value of the festival.</p>
+                    <img src="assets/projects/other/moodboard.png" alt="moodboard" style="width: 60%; border: 1px solid #ccc;" loading="lazy">
                     <h3>Poster</h3>
-                    <h3>Signage and Map</h3>
+                    <p>We were tasked to make at least 8 different iterations of our poster under a short time frame (~1 minute per poster), the poster on the left being my final iteration.</p>
+                    <p> Darumadrop One was used for the wordmark and Lato for supporting information. A variety of text weights and styles were used to guide viewers through the content such as bold headers are for key information and dates, italics for venue locations, and enlarged sizing for the festival dates themselves. The bold blue wordmark with playful doodles (drink and croissant) integrated into the wordmark along with the picnic design on the bottom communicates the festival's casual, food focused identity and hint at the festival's approachable, exploratory nature. The monochromatic blue palette maintains readability while creating an inviting aesthetic that appeals to adventurous food enthusiasts seeking authentic experiences beyond typical large-scale food events.</p>
+                    <div class="poster-layout">
+                        <div class="final-poster">
+                            <img src="assets/projects/altitude/final_altitude.png" alt="altitude poster" loading="lazy">
+                        </div>
+                        <div class="drafts-grid">
+                            <img src="assets/projects/altitude/altitude_draft1.png" alt="altitude draft 1" loading="lazy">
+                            <img src="assets/projects/altitude/altitude_draft2.png" alt="altitude draft 2" loading="lazy">
+                            <img src="assets/projects/altitude/altitude_draft3.png" alt="altitude draft 3" loading="lazy">
+                            <img src="assets/projects/altitude/altitude_draft4.png" alt="altitude draft 4" loading="lazy">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -173,31 +210,47 @@
             <div class="project-section" id="prototyping">
                 <div class="project-heading">
                     <h2>Prototyping</h2>
+                    <hr class="section-hr">
                 </div>
                 <div class="project-content">
                     <!-- Content for user flow will go here -->
+                    <p>For this design, users can browse the festival vendor lineup and view their locations to reduce confusion during the event. Custom filters and tags let users explore vendors by category and save favorites. Since the festival highlights small businesses, there is also a page for new vendors to apply for participation.</p>
                      <h3>User Flow</h3>
+                     <img src="user_flow.png" alt="User Flow" style="max-width: 100%; height: auto; border: 1px solid #ccc;" loading="lazy">
                      <h3>Wireframes</h3>
+                     <img src="wireframe.png" alt="Wireframes" style="max-width: 100%; height: auto; border: 1px solid #ccc;" loading="lazy">
                 </div>
             </div>
 
-            <div class="project-section" id="app-design">
+           <!-- <div class="project-section" id="app-design">
                 <div class="project-heading">
                     <h2>App Design</h2>
+                    <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <!-- Content for icons will go here -->
+                    Content for icons will go here
                      <h3>Icons</h3>
                      <h3>Mobile Interface</h3>
                 </div>
-            </div>
+            </div> -->
 
             <div class="project-section" id="mobile-interface">
                 <div class="project-heading">
                     <h2>Mobile Interface</h2>
+                    <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <!-- Content for mobile interface will go here -->
+                    <img src="prototype.png" alt="Prototype" style="max-width: 100%; height: auto;" loading="lazy">
+                </div>
+            </div>
+
+            <div class="project-section" id="reflection">
+                <div class="project-heading">
+                    <h2>Reflection</h2>
+                    <hr class="section-hr">
+                </div>
+                <div class="project-content">
+                    <p>Designing a cohesive visual identity across multiple touchpoints—wordmark, poster, and app—taught me how consistency reinforces a brand's personality. The short time frame pushed me to make faster design decisions and create mutliple iterations whether perfect or not.<br>The user interviews were helpful in revealing what food festival-goers actually care about such as discovery, clear wayfinding, and convenience. Their feedback helped me prioritize features like vendor filtering, location mapping, and saved favorites in the app.<br>Given more time, I would hope to expand more on the vendor's side for how they could gain more exposure as a new business to the scene as well as testing my prototype with users to discover any pain points of the app to improve the user experience.</p>  
                 </div>
             </div>
         </div>

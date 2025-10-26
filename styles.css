@@ -9,6 +9,95 @@ body.art-page {
     background-color: #202020;
 }
 
+h1 {
+    font-size: 3rem;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 10;
+    font-family: "ivypresto-display", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #333;
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    font-family: "ivypresto-display", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #333;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+.highlight-blue {
+    color: #cfdffc;
+}
+
+.highlight-yellow {
+    color: #ffeab8;
+}
+
+.highlight-pink {
+    color: #f5bdd4;
+}
+
+.short-hr {
+    width: 1200px;
+    margin: 20px auto 0 auto;
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid #333;
+    position: relative;
+    z-index: 10;
+}
+
+hr.solid {
+    position: relative;
+    z-index: 10;
+    border: none;
+    border-top: 1px solid #333;
+    margin: 95px 0 0 0;
+}
+
+h2 {
+    font-family: "ivypresto-display", serif;
+    font-weight: 300;
+    color: #333;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #333;
+    font-size: 1.1rem;
+    margin: 20px 0 10px 0;
+}
+
+h4 {
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 10;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding-left: 200px;
+    font-family: "ivypresto-display", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
 
 .gradient-background {
     position: relative;
@@ -104,13 +193,14 @@ nav ul {
 nav a {
     color: #333;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #666;
+    color: #333;
     text-decoration: underline;
 }
 
@@ -124,7 +214,7 @@ body.art-page nav a {
 }
 
 body.art-page nav a:hover {
-    color: #ccc;
+    color: white;
 }
 
 /* Ensure all nav links are white on art page */
@@ -136,75 +226,6 @@ body.art-page nav a:visited {
 /* Make Art heading white on art page */
 body.art-page h2 {
     color: white;
-}
-
-h1 {
-    font-size: 3rem;
-    margin-top: 100px;
-    margin-bottom: 200px;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 20px;
-    position: relative;
-    z-index: 10;
-    font-family: "ivypresto-display", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #333;
-}
-
-.intro-title {
-    font-size: 2.5rem;
-    font-family: "ivypresto-display", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #333;
-    margin: 0 0 30px 0;
-    padding: 0;
-}
-
-.highlight-blue {
-    color: #cfdffc;
-}
-
-.highlight-yellow {
-    color: #ffeab8;
-}
-
-.highlight-pink {
-    color: #f5bdd4;
-}
-
-.short-hr {
-    width: 1200px;
-    margin: 0 auto;
-    border: none;
-    border-top: 1px solid #b9b9b9;
-}
-
-
-h2 {
-    font-family: "ivypresto-display", serif;
-    font-weight: 300;
-    color: #333;
-    font-style: normal;
-    font-size: 1.2rem;
-}
-
-h4 {
-    font-size: 1.2rem;
-    position: relative;
-    z-index: 10;
-    margin-bottom: 100px;
-    padding-left: 200px;
-    font-family: "ivypresto-display", serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
 }
 
 
@@ -292,13 +313,6 @@ p {
     padding: 2px 16px;
 }
 
-hr.solid {
-    position: relative;
-    z-index: 10;
-    border: none;
-    border-top: 1px solid #333;
-    margin: 0;
-}
 
 .container { 
     margin-left: 200px;
@@ -338,7 +352,6 @@ hr.solid {
     width: 350px;
 
     object-fit: cover;
-    border-radius: 8px;
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);*/
     transform: rotate(-3deg);
     z-index: 1;
@@ -608,13 +621,13 @@ hr.solid {
 .project-header {
     text-align: center;
     padding: 120px 60px 100px 60px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    margin: 40px auto 60px auto;
+    background: linear-gradient(135deg, #f5f7fa 0%, #8fa4d3 100%);
+    margin: 20px auto 60px auto;
     margin-left: 350px;
     margin-right: 150px;
     max-width: 700px;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
 }
 
 /* Section Navigation - Sidebar */
@@ -654,7 +667,6 @@ hr.solid {
 .section-nav a:hover {
     color: #333;
     transform: translateX(3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-header h1 {
@@ -663,6 +675,8 @@ hr.solid {
     color: #333;
     font-weight: 700;
     letter-spacing: -1px;
+    position: relative;
+    z-index: 2;
 }
 
 .project-header h2 {
@@ -670,6 +684,8 @@ hr.solid {
     margin: 0 0 5px 0;
     color: #666;
     font-weight: 400;
+    position: relative;
+    z-index: 2;
 }
 
 .project-header h3 {
@@ -679,12 +695,14 @@ hr.solid {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
 }
 
 .project-container {
-    max-width: 1300px;
+    max-width: 2000px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 10px 20px;
     margin-left: 350px;
     margin-right: 150px;
 }
@@ -702,14 +720,17 @@ hr.solid {
 }
 
 .meta-item h2 {
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     margin: 0 0 6px 0;
     font-weight: 400;
     color: #666;
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
 }
 
 .meta-item p {
     margin: 0;
+    font-size: 0.9rem;
 }
 
 .project-section {
@@ -725,7 +746,8 @@ hr.solid {
     font-size: 1.5rem;
     margin: 0 0 10px 0;
     color: #333;
-    font-weight: 600;
+    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 .project-content {
@@ -733,12 +755,12 @@ hr.solid {
     min-width: 0;
 }
 
-.project-content p {
-    font-size: 1.1rem;
+  .project-content p {
+    font-size: 0.9rem;
     line-height: 1.7;
     margin: 0 0 20px 0;
     color: #333;
-}
+  }
 
 .project-content img {
     max-width: 100%;
@@ -791,17 +813,169 @@ a:link {
 
 
 .darumadrop-one-regular {
-    font-family: "Darumadrop One", sans-serif;
+    font-family: "Darumadrop One", sans-serif !important;
     font-weight: 400;
     font-style: normal;
+    font-size: 2rem !important;
   }
 
   table, th, td {
     border:1px solid black;
     border-collapse: collapse;
     padding: 15px;
+    font-family: "Inter", sans-serif;
   }
   
+  /* Poster layout styles */
+  .poster-layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+  
+  .final-poster {
+    flex: 0 0 50%;
+  }
+  
+  .final-poster img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+  }
+  
+  .drafts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    flex: 0 0 50%;
+    height: 100%;
+  }
+  
+  .drafts-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .poster-layout {
+      flex-direction: column;
+    }
+    
+    .final-poster,
+    .drafts-grid {
+      flex: none;
+      width: 100%;
+    }
+  }
+  
+  /* New hr class for hcde308 page */
+  .section-hr {
+    width: 1000px;
+    margin: 20px auto 0 auto;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* About me page specific overrides to fix layout after font change */
+  .container p {
+    line-height: 1.4;
+    font-size: 1.1rem;
+  }
+  
+  .carousel-description {
+    font-family: "Inter", sans-serif;
+    line-height: 1.3;
+    font-size: 0.85rem;
+  }
+  
+  /* Outlined box styling */
+  .outlined-box {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin: 40px auto;
+    margin-left: 350px;
+    margin-right: 150px;
+    background: radial-gradient(circle, rgba(255, 120, 120, 0.3) 0%, rgba(255, 180, 180, 0.15) 50%, #f5f5f5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  .scrapbook-corner {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 200px;
+    height: auto;
+    transform: rotate(180deg);
+    z-index: 10;
+    opacity: 0.8;
+  }
+  
+  .cat-image {
+    position: absolute;
+    top: 5px;
+    right: 120px;
+    width: 100px;
+    height: auto;
+    z-index: 15;
+    opacity: 0.9;
+  }
+  
+  .vsa-images {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .vsa-card-front {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transform: rotate(-5deg);
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-right: -50px;
+    margin-bottom: -30px;
+  }
+  
+  .vsa-card-back {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transform: rotate(8deg);
+    z-index: 1;
+    margin-top: 40px;
+    margin-left: -20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .vsa-tshirts {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    z-index: 3;
+    transform: rotate(-8deg);
+  }
+  
+ 
 
 
 
