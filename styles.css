@@ -358,7 +358,7 @@ body.art-page h2 {
 
 .project-title {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 300;
     color: #333;
     margin: 0 0 12px 0;
     font-family: "ivypresto-display", serif;
@@ -372,7 +372,6 @@ body.art-page h2 {
 }
 
 .project-meta {
-    border-top: 1px solid #dee2e6;
     padding-top: 12px;
 }
 
@@ -868,6 +867,7 @@ body.art-page h2 {
 .project-content img {
     max-width: 100%;
     height: auto;
+    border-radius: 0;
 }
 
 /* Responsive design for project layout */
