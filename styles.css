@@ -19,7 +19,7 @@ h1 {
     position: relative;
     z-index: 10;
     font-family: "ivypresto-display", serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     color: #333;
 }
@@ -327,7 +327,109 @@ body.art-page h2 {
     margin-right: 0;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    padding: 0 50px;
+}
+
+/* Project card styling */
+.project-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 12px 0;
+    font-family: "ivypresto-display", serif;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+.project-meta {
+    border-top: 1px solid #dee2e6;
+    padding-top: 12px;
+}
+
+.project-tags {
+    font-size: 0.85rem;
+    color: #888;
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-visual {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-logo {
+    width: 60px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.project-mobile {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* VSA cards in project context */
+.project-visual .vsa-card-front,
+.project-visual .vsa-card-back {
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: inline-block;
+}
+
+.project-visual .vsa-card-front {
+    transform: rotate(-5deg);
+    z-index: 2;
+    margin-right: -20px;
+}
+
+.project-visual .vsa-card-back {
+    transform: rotate(8deg);
+    z-index: 1;
 }
 
 .profile-container {
@@ -653,7 +755,8 @@ body.art-page h2 {
 .section-nav a {
     color: #333;
     text-decoration: none;
-    font-weight: 500;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
     font-size: 0.85rem;
     padding: 10px 12px;
     border-radius: 10px;
@@ -1162,6 +1265,26 @@ a:link {
       height: 300px;
     }
     
+    /* Project card responsive */
+    .card-container {
+      padding: 0 30px;
+    }
+    
+    .project-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px;
+      gap: 20px;
+    }
+    
+    .project-visual {
+      justify-content: center;
+    }
+    
+    .project-title {
+      font-size: 1.5rem;
+    }
+    
     /* Profile container adjustments */
     .scrapbook-photos {
       width: 300px;
@@ -1322,6 +1445,36 @@ a:link {
     
     .card h2 {
       font-size: 1rem;
+    }
+    
+    /* Project card mobile */
+    .card-container {
+      padding: 0 20px;
+    }
+    
+    .project-card {
+      padding: 20px;
+      gap: 15px;
+    }
+    
+    .project-title {
+      font-size: 1.3rem;
+    }
+    
+    .project-description {
+      font-size: 1rem;
+    }
+    
+    .project-logo {
+      width: 50px;
+    }
+    
+    .project-mobile {
+      width: 100px;
+    }
+    
+    .project-image {
+      width: 120px;
     }
     
     /* Profile container - stack vertically on mobile */

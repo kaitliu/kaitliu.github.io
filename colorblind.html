@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>kaitlyn liu</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+        <link rel="stylesheet" href="https://use.typekit.net/ufm8mvs.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            /* Font display swap for Adobe Typekit fonts */
+            @font-face {
+                font-family: "ivypresto-display";
+                font-display: swap;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <a href="index.html" class="logo">kaityliu</a>
+        
+        <!-- Mobile menu toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Desktop navigation -->
+        <nav>
+            <ul>
+                <li><a href="aboutme.html">ABOUT ME</a></li>
+                <!-- <li><a href="art.html">ART</a></li> -->
+                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
+                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile navigation -->
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="aboutme.html">ABOUT ME</a></li>
+                <!-- <li><a href="art.html">ART</a></li> -->
+                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
+                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
+            </ul>
+        </nav> 
+
+        <div class="project-header">
+            <h1>Colorblindness Web Extension</h1>
+            <h2>Inclusive Design</h2>
+            <h3>UX DESIGN • STUDENT WORK • 2025</h3>
+        </div>
+
+        <nav class="section-nav">
+            <ul>
+                <li><a href="#overview">OVERVIEW</a></li>
+                <li><a href="#research">RESEARCH</a></li>
+                <li><a href="#design">DESIGN</a></li>
+                <li><a href="#prototyping">PROTOTYPING</a></li>
+                <li><a href="#reflection">REFLECTION</a></li>
+            </ul>
+        </nav>
+
+        <div class="project-container">
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <h2>Team</h2>
+                    <p>Solo</p>
+                </div>
+                <div class="meta-item">
+                    <h2>Timeline</h2>
+                    <p>Winter 2025 (10 weeks)</p>
+                </div>
+                <div class="meta-item">
+                    <h2>Tools</h2>
+                    <p>Figma</p>
+                    <p>Chrome Extension API</p>
+                </div>
+                <div class="meta-item">
+                    <h2>Skills</h2>
+                    <p>Accessibility Design</p>
+                    <p>Web Development</p>
+                </div>
+            </div>
+
+            <div class="project-section" id="overview">
+                <div class="project-heading">
+                    <h2>Overview</h2>
+                    <hr class="section-hr">
+                </div>
+                <div class="project-content">
+                    <p>This project focuses on creating an inclusive web experience for users with color vision deficiency (CVD). The challenge was to design and develop a browser extension that helps colorblind users better distinguish colors on websites, improving their overall browsing experience and accessibility.</p>
+                </div>
+            </div>
+
+            <div class="project-section" id="research">
+                <div class="project-heading">
+                    <h2>Research</h2>
+                    <hr class="section-hr">
+                </div>
+                <div class="project-content">
+                    <p>Research phase included understanding different types of color vision deficiency, analyzing current accessibility tools, and identifying pain points in existing web experiences for colorblind users.</p>
+                </div>
+            </div>
+
+            <div class="project-section" id="design">
+                <div class="project-heading">
+                    <h2>Design</h2>
+                    <hr class="section-hr">
+                </div>
+                <div class="project-content">
+                    <p>Design process focused on creating intuitive color adjustment tools, clear visual indicators, and seamless integration with existing web content.</p>
+                </div>
+            </div>
+
+            <div class="project-section" id="prototyping">
+                <div class="project-heading">
+                    <h2>Prototyping</h2>
+                    <hr class="section-hr">
+                </div>
+                <div class="project-content">
+                    <p>Prototyping involved developing functional prototypes, testing with colorblind users, and iterating based on feedback to ensure the solution effectively addresses accessibility needs.</p>
+                </div>
+            </div>
+
+            <div class="project-section" id="reflection">
+                <div class="project-heading">
+                    <h2>Reflection</h2>
+                    <hr class="section-hr">
+                </div>
+                <div class="project-content">
+                    <p>This project highlighted the importance of inclusive design in digital experiences and the need for better accessibility tools in web browsing. The extension serves as a practical solution for colorblind users while raising awareness about accessibility in web design.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            // Mobile navigation functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+                const mobileNav = document.querySelector('.mobile-nav');
+                
+                if (mobileMenuToggle && mobileNav) {
+                    mobileMenuToggle.addEventListener('click', function() {
+                        mobileMenuToggle.classList.toggle('active');
+                        mobileNav.classList.toggle('active');
+                    });
+                    
+                    // Close mobile menu when clicking on a link
+                    const mobileNavLinks = mobileNav.querySelectorAll('a');
+                    mobileNavLinks.forEach(link => {
+                        link.addEventListener('click', function() {
+                            mobileMenuToggle.classList.remove('active');
+                            mobileNav.classList.remove('active');
+                        });
+                    });
+                    
+                    // Close mobile menu when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!mobileMenuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
+                            mobileMenuToggle.classList.remove('active');
+                            mobileNav.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        </script>
+
+    </body>
+</html>
