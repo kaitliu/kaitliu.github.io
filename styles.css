@@ -1162,13 +1162,20 @@ a:link {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
   .mobile-nav li {
-    margin: 20px 0;
+    margin: 15px 0;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .mobile-nav a {
@@ -1178,11 +1185,14 @@ a:link {
     font-size: 1.5rem;
     font-weight: 400;
     transition: color 0.3s ease;
-    display: inline-block;
-    padding: 10px 20px;
-    white-space: nowrap;
-    max-width: 100%;
+    display: block;
+    padding: 12px 20px;
+    width: auto;
+    max-width: calc(100vw - 40px);
     box-sizing: border-box;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .mobile-nav a:hover {
@@ -1322,7 +1332,13 @@ a:link {
       font-size: 1.5rem;
     }
     
-    /* Profile container adjustments */
+    /* Profile container adjustments - maintain desktop layout */
+    .profile-container {
+      position: relative;
+      display: inline-block;
+      transform: rotate(5deg);
+    }
+    
     .scrapbook-photos {
       width: 300px;
       height: 300px;
@@ -1333,8 +1349,10 @@ a:link {
     }
     
     .hammock-group {
+      position: absolute;
       top: -40px;
       left: 200px;
+      transform: rotate(8deg);
     }
     
     .hammock-photo {
@@ -1342,21 +1360,28 @@ a:link {
     }
     
     .polaroid-frame {
+      position: absolute;
       top: -12px;
       left: -55px;
       width: 250px;
+      display: block;
     }
     
     .ankokoanko-overlay {
+      position: absolute;
       bottom: -50px;
       right: -50px;
       width: 150px;
+      transform: rotate(-10deg);
     }
     
     .keyboard-overlay {
+      position: absolute;
       top: -60px;
       left: -50px;
       font-size: 12px;
+      transform: rotate(-5deg);
+      display: block;
     }
     
     /* VSA images adjustments */
@@ -1441,7 +1466,8 @@ a:link {
     /* Mobile navigation adjustments */
     .mobile-nav a {
       font-size: 1.2rem;
-      padding: 8px 15px;
+      padding: 10px 15px;
+      max-width: calc(100vw - 40px);
     }
     
     /* Container adjustments */
@@ -1533,51 +1559,71 @@ a:link {
       width: 120px;
     }
     
-    /* Profile container - stack vertically on mobile */
+    /* Profile container - maintain desktop layout on mobile */
     .profile-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transform: none;
+      position: relative;
+      display: inline-block;
+      transform: rotate(5deg);
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      overflow: visible;
+    }
+    
+    /* Ensure container doesn't cause horizontal overflow */
+    .container {
+      max-width: 100%;
+      box-sizing: border-box;
     }
     
     .scrapbook-photos {
-      width: 250px;
-      height: 250px;
-      margin-bottom: 20px;
+      width: 280px;
+      height: 280px;
+      margin: 0 auto;
     }
     
     .portfolio-photo {
-      width: 200px;
+      width: 245px;
     }
     
     .hammock-group {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: none;
-      margin-top: 10px;
+      position: absolute;
+      top: -35px;
+      left: 189px;
+      transform: rotate(8deg);
     }
     
     .hammock-photo {
-      width: 120px;
+      width: 126px;
     }
     
     .polaroid-frame {
-      display: none; /* Hide on very small screens */
+      display: block;
+      top: -10px;
+      left: -49px;
+      width: 224px;
     }
     
     .ankokoanko-overlay {
-      position: relative;
-      bottom: 0;
-      right: 0;
-      width: 120px;
-      transform: none;
-      margin-top: 10px;
+      position: absolute;
+      bottom: -42px;
+      right: -42px;
+      width: 140px;
+      transform: rotate(-10deg);
     }
     
     .keyboard-overlay {
-      display: none; /* Hide on very small screens */
+      display: block;
+      position: absolute;
+      top: -52px;
+      left: -42px;
+      font-size: 10px;
+      transform: rotate(-5deg);
+    }
+    
+    .keyboard-overlay pre {
+      margin: 0;
+      line-height: 1;
     }
     
     /* VSA images - stack vertically */
@@ -1747,10 +1793,19 @@ a:link {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 20px;
+      max-width: 100%;
+      width: 100%;
+      padding: 0 20px;
     }
     
     .mobile-nav li {
       margin: 0;
+      flex: 0 0 auto;
+    }
+    
+    .mobile-nav a {
+      max-width: calc(100vw - 40px);
+      white-space: nowrap;
     }
   }
   
