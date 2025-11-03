@@ -319,20 +319,27 @@
                 if (scrapbookPhotos) {
                     // Detect if device is touch-enabled
                     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-                    
+
+                    let tiltTimeoutId = null;
                     if (isTouchDevice) {
                         scrapbookPhotos.addEventListener('click', function(e) {
                             // Prevent default behavior
                             e.preventDefault();
-                            
+
                             // Add active class to trigger hover effect
                             this.classList.add('active');
-                            
-                            // Remove active class after animation completes and brief hold
-                            // 300ms transition + 100ms hold = 400ms total
-                            setTimeout(() => {
+
+                            // If a previous timeout exists, clear it so we restart the timer
+                            if (tiltTimeoutId) {
+                                clearTimeout(tiltTimeoutId);
+                            }
+
+                            // Remove active class after ~1 second automatically
+                            // 300ms transition + ~700ms hold ≈ 1000ms total
+                            tiltTimeoutId = setTimeout(() => {
                                 this.classList.remove('active');
-                            }, 400);
+                                tiltTimeoutId = null;
+                            }, 1000);
                         });
                     }
                 }

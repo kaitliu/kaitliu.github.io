@@ -685,6 +685,7 @@ body.art-page h2 {
     height: 320px;
     margin: 0;
     padding: 0;
+    line-height: 0; /* remove baseline gap below image */
 }
 
 .image-carousel img {
@@ -713,7 +714,7 @@ body.art-page h2 {
 }
 
 .carousel-description {
-    margin: 6px 0 0 0;
+    margin: 2px 0 0 0; /* tighter gap below image */
     font-size: 0.9rem;
     color: #666;
     text-align: left;
@@ -1286,6 +1287,7 @@ a:link {
       margin-right: 50px;
       flex-direction: column;
       gap: 40px;
+      padding-top: 100px; /* prevent overlap with fixed logo/nav */
     }
     
     /* Reorder elements for mobile: title, images, then paragraph */
@@ -1295,8 +1297,8 @@ a:link {
     
     .profile-container {
       order: 2;
-      margin-bottom: 80px;
-      padding-bottom: 40px;
+      margin-bottom: 120px;
+      padding-bottom: 60px;
     }
     
     .container > p {
@@ -1498,6 +1500,7 @@ a:link {
       margin-left: 20px;
       margin-right: 20px;
       gap: 30px;
+      padding-top: 120px; /* prevent overlap with fixed logo/nav */
     }
     
     /* Reorder elements for mobile: title, images, then paragraph */
@@ -1507,8 +1510,8 @@ a:link {
     
     .profile-container {
       order: 2;
-      margin-bottom: 80px;
-      padding-bottom: 40px;
+      margin-bottom: 120px;
+      padding-bottom: 60px;
     }
     
     .container > p {
