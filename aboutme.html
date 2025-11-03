@@ -329,10 +329,10 @@
                             this.classList.add('active');
                             
                             // Remove active class after animation completes and brief hold
-                            // 300ms transition + 200ms hold = 500ms total
+                            // 300ms transition + 100ms hold = 400ms total
                             setTimeout(() => {
                                 this.classList.remove('active');
-                            }, 500);
+                            }, 400);
                         });
                     }
                 }

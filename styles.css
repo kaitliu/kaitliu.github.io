@@ -674,12 +674,17 @@ body.art-page h2 {
     min-width: 180px;
     max-width: 180px;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .carousel-item picture {
     display: block;
     width: 100%;
     height: 320px;
+    margin: 0;
+    padding: 0;
 }
 
 .image-carousel img {
@@ -708,10 +713,11 @@ body.art-page h2 {
 }
 
 .carousel-description {
-    margin: 10px 0 0 0;
+    margin: 6px 0 0 0;
     font-size: 0.9rem;
     color: #666;
     text-align: left;
+    padding: 0;
 }
 
 .art-label {
@@ -1289,6 +1295,8 @@ a:link {
     
     .profile-container {
       order: 2;
+      margin-bottom: 80px;
+      padding-bottom: 40px;
     }
     
     .container > p {
@@ -1499,6 +1507,8 @@ a:link {
     
     .profile-container {
       order: 2;
+      margin-bottom: 80px;
+      padding-bottom: 40px;
     }
     
     .container > p {
