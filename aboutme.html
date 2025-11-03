@@ -313,6 +313,29 @@
                         }
                     });
                 }
+                
+                // Mobile touch interaction for scrapbook photos
+                const scrapbookPhotos = document.querySelector('.scrapbook-photos');
+                if (scrapbookPhotos) {
+                    // Detect if device is touch-enabled
+                    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+                    
+                    if (isTouchDevice) {
+                        scrapbookPhotos.addEventListener('click', function(e) {
+                            // Prevent default behavior
+                            e.preventDefault();
+                            
+                            // Add active class to trigger hover effect
+                            this.classList.add('active');
+                            
+                            // Remove active class after animation completes and brief hold
+                            // 300ms transition + 200ms hold = 500ms total
+                            setTimeout(() => {
+                                this.classList.remove('active');
+                            }, 500);
+                        });
+                    }
+                }
             });
         </script>
     

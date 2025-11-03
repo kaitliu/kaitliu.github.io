@@ -502,11 +502,13 @@ body.art-page h2 {
 }
 
 /* Hover effects for interactive scrapbook feel */
-.scrapbook-photos:hover .portfolio-photo {
+.scrapbook-photos:hover .portfolio-photo,
+.scrapbook-photos.active .portfolio-photo {
     transform: rotate(-1deg) scale(1.02);
 }
 
-.scrapbook-photos:hover .hammock-group {
+.scrapbook-photos:hover .hammock-group,
+.scrapbook-photos.active .hammock-group {
     transform: rotate(6deg) scale(1.02);
 }
 
@@ -1280,6 +1282,19 @@ a:link {
       gap: 40px;
     }
     
+    /* Reorder elements for mobile: title, images, then paragraph */
+    .intro-title {
+      order: 1;
+    }
+    
+    .profile-container {
+      order: 2;
+    }
+    
+    .container > p {
+      order: 3;
+    }
+    
     .project-container {
       margin-left: 50px;
       margin-right: 50px;
@@ -1475,6 +1490,19 @@ a:link {
       margin-left: 20px;
       margin-right: 20px;
       gap: 30px;
+    }
+    
+    /* Reorder elements for mobile: title, images, then paragraph */
+    .intro-title {
+      order: 1;
+    }
+    
+    .profile-container {
+      order: 2;
+    }
+    
+    .container > p {
+      order: 3;
     }
     
     .project-container {
