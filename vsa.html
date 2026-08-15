@@ -65,8 +65,11 @@
         <nav class="section-nav">
             <ul>
                 <li><a href="#overview">OVERVIEW</a></li>
-                <li><a href="#design">SKETCHES</a></li>
-                <li><a href="#impact">FINAL DESIGN</a></li>
+                <li><a href="#design">MEMBERSHIP</a></li>
+                <li><a href="#gm-graphics">GM GRAPHICS</a></li>
+                <li><a href="#winter-formal">WINTER FORMAL</a></li>
+                <li><a href="#graduation-stoles">STOLES</a></li>
+                <li><a href="#impact">MISC DESIGNS</a></li>
             </ul>
         </nav>
 
@@ -99,29 +102,85 @@
                     <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <p>As a graphic design officer for the Vietnamese Student Association (VSA) at the University of Washington, I create designs for the membership card and t-shirt, designing promotional graphics for biweekly general meetings on Instagram, and developing visual assets for Phở King, VSA's biennial intercollegiate cultural event. Each of which have increased engagement within the 100+ member community, bringing together Vietnamese and other cultures alike, as well as contributing to fundraising efforts.</p>
+                    <p>As a graphic design officer for the Vietnamese Student Association (VSA) at the University of Washington, I created designs for the membership card and t-shirt, designed promotional graphics for biweekly general meetings, and developed a branding kit for Phở King, VSA's biennial intercollegiate cultural event. Each of which have increased engagement within the 100+ member community, bringing together Vietnamese and other cultures alike, as well as contributing to fundraising efforts.</p>
                 </div>
             </div>
 
             <div class="project-section" id="design">
                 <div class="project-heading">
-                    <h2>Sketches</h2>
+                    <h2>Membership Design</h2>
                     <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <p></p>
+                    <h3>Membership Cards</h3>
+                    <div class="membership-gallery">
+                        <img src="assets/projects/vsa/vsa_card_front.png" alt="VSA membership card front">
+                        <img src="assets/projects/vsa/vsa_card_back.png" alt="VSA membership card back">
+                    </div>
+                    <h3>T-Shirt Design</h3>
+                    <img src="assets/projects/vsa/vsa_tshirts.png" alt="VSA membership t-shirt front and back" class="membership-tshirt">
+                </div>
+            </div>
+
+            <div class="project-section" id="gm-graphics">
+                <div class="project-heading">
+                    <h2>General Meeting Graphics</h2>
+                    <hr class="section-hr">
+                </div>
+                <div class="project-content">
+                    <p>These are graphics made for each VSAUW general meeting. They are all themed around cereal/cereal boxes.</p>
+                    <div class="gm-gallery">
+                        <img src="gm1.png" alt="VSA General Meeting 1 graphic">
+                        <img src="gm2.png" alt="VSA General Meeting 2 graphic">
+                        <img src="gm3.png" alt="VSA General Meeting 3 graphic">
+                        <img src="gm4.png" alt="VSA General Meeting 4 graphic">
+                        <img src="gm5.png" alt="VSA General Meeting 5 graphic">
+                        <img src="gm6.png" alt="VSA General Meeting 6 graphic">
+                        <img src="gm8.png" alt="VSA General Meeting 8 graphic">
+                        <img src="gm10.png" alt="VSA General Meeting 10 graphic">
+                        <img src="gm11.png" alt="VSA General Meeting 11 graphic">
+                        <img src="gm12.png" alt="VSA General Meeting 12 graphic">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section" id="winter-formal">
+                <div class="project-heading">
+                    <h2>Winter Formal</h2>
+                    <hr class="section-hr">
+                </div>
+                <div class="project-content">
+                    <img src="winter_formal.png" alt="VSA Winter Formal poster, Dance of Lights" class="winter-formal-poster">
+                </div>
+            </div>
+
+            <div class="project-section" id="graduation-stoles">
+                <div class="project-heading">
+                    <h2>Graduation Stoles</h2>
+                    <hr class="section-hr">
+                </div>
+                <div class="project-content">
+                    <div class="stole-gallery">
+                        <img src="left stole w background (1).png" alt="VSA graduation stole, left side">
+                        <img src="right stole w background (1).png" alt="VSA graduation stole, right side">
+                    </div>
                 </div>
             </div>
 
             <div class="project-section" id="impact">
                 <div class="project-heading">
-                    <h2>Final Design</h2>
+                    <h2>Other Miscellaneous Designs</h2>
                     <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <p></p>
+                    <div class="misc-gallery">
+                        <img src="gen officer apps.png" alt="VSA General Officer applications graphic">
+                        <img src="gen officer apps round 2.png" alt="VSA General Officer applications round 2 graphic">
+                        <img src="MEDIA reveal.png" alt="VSA Media Team Officer Reveal graphic">
+                    </div>
                 </div>
             </div>
+        </div>
 
         <script>
             // Mobile navigation functionality
@@ -150,6 +209,47 @@
                             mobileMenuToggle.classList.remove('active');
                             mobileNav.classList.remove('active');
                         }
+                    });
+                }
+
+                const sections = Array.from(document.querySelectorAll('.project-section[id]'));
+                const navLinks = Array.from(document.querySelectorAll('.section-nav a'));
+
+                function setActiveNav(id) {
+                    navLinks.forEach(function(link) {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+                    });
+                }
+
+                if (sections.length && navLinks.length) {
+                    let currentId = sections[0].id;
+                    setActiveNav(currentId);
+
+                    const visibleIds = new Set();
+                    const observer = new IntersectionObserver(function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                visibleIds.add(entry.target.id);
+                            } else {
+                                visibleIds.delete(entry.target.id);
+                            }
+                        });
+
+                        if (visibleIds.size) {
+                            sections.forEach(function(section) {
+                                if (visibleIds.has(section.id)) {
+                                    currentId = section.id;
+                                }
+                            });
+                            setActiveNav(currentId);
+                        }
+                    }, {
+                        rootMargin: '-20% 0px -55% 0px',
+                        threshold: 0
+                    });
+
+                    sections.forEach(function(section) {
+                        observer.observe(section);
                     });
                 }
             });

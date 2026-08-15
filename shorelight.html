@@ -187,6 +187,47 @@
                         }
                     });
                 }
+
+                const sections = Array.from(document.querySelectorAll('.project-section[id]'));
+                const navLinks = Array.from(document.querySelectorAll('.section-nav a'));
+
+                function setActiveNav(id) {
+                    navLinks.forEach(function(link) {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+                    });
+                }
+
+                if (sections.length && navLinks.length) {
+                    let currentId = sections[0].id;
+                    setActiveNav(currentId);
+
+                    const visibleIds = new Set();
+                    const observer = new IntersectionObserver(function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                visibleIds.add(entry.target.id);
+                            } else {
+                                visibleIds.delete(entry.target.id);
+                            }
+                        });
+
+                        if (visibleIds.size) {
+                            sections.forEach(function(section) {
+                                if (visibleIds.has(section.id)) {
+                                    currentId = section.id;
+                                }
+                            });
+                            setActiveNav(currentId);
+                        }
+                    }, {
+                        rootMargin: '-20% 0px -55% 0px',
+                        threshold: 0
+                    });
+
+                    sections.forEach(function(section) {
+                        observer.observe(section);
+                    });
+                }
             });
         </script>
 
