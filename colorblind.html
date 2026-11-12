@@ -24,38 +24,61 @@
     <body>
 
         <a href="index.html" class="logo">kaityliu</a>
-        
-        <!-- Mobile menu toggle -->
-        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
 
-        <!-- Desktop navigation -->
-        <nav>
+        <nav class="dock-nav" aria-label="Main">
             <ul>
-                <li><a href="aboutme.html">ABOUT ME</a></li>
-                <!-- <li><a href="art.html">ART</a></li> -->
-                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
-                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#work" class="active">WORK</a></li>
+                <li><a href="aboutme.html">ABOUT</a></li>
+                <li>
+                    <a href="resume.pdf" class="dock-nav-resume" target="_blank" aria-label="Resume">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <path d="M7 3.5h7.5L19 8v12.5H7z"/>
+                            <path d="M14.5 3.5V8H19"/>
+                            <path d="M10 12h6M10 15.5h6"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </nav>
-        
-        <!-- Mobile navigation -->
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="aboutme.html">ABOUT ME</a></li>
-                <!-- <li><a href="art.html">ART</a></li> -->
-                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
-                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
-            </ul>
-        </nav> 
 
-        <div class="project-header">
-            <h1>Colorblindness Web Extension</h1>
-            <h2>Inclusive Design</h2>
-            <h3>UX DESIGN • STUDENT WORK • 2025</h3>
+        <div class="project-hero">
+            <aside class="project-meta">
+                <div class="meta-card">
+                    <span class="meta-label">Timeline</span>
+                    <div class="meta-value">
+                        <p>Winter 2025 (10 weeks)</p>
+                    </div>
+                </div>
+                <div class="meta-card">
+                    <h2 class="meta-card-title">Team</h2>
+                    <div class="meta-value">
+                        <p>Kaitlyn Liu</p>
+                        <p>Kristi Kim</p>
+                        <p>Lilly Oh</p>
+                        <p>Yan Zhu</p>
+                    </div>
+                </div>
+                <div class="meta-card">
+                    <h2 class="meta-card-title">Detail</h2>
+                    <div class="meta-detail">
+                        <span class="meta-label">Tools</span>
+                        <div class="meta-value">
+                            <p>Figma</p>
+                            <p>Sketchbook</p>
+                        </div>
+                        <span class="meta-label">Skills</span>
+                        <div class="meta-value">
+                            <p>Accessibility Design</p>
+                            <p>User Interviews</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="project-header project-header--cover">
+                <img src="web_extension.png" alt="Colorblindness web extension cover" class="project-header-cover">
+            </div>
         </div>
 
         <nav class="section-nav">
@@ -69,30 +92,6 @@
         </nav>
 
         <div class="project-container">
-
-            <div class="project-meta">
-                <div class="meta-item">
-                    <h2>Team</h2>
-                    <p>Kaitlyn Liu</p>
-                    <p>Kristi Kim</p>
-                    <p>Lilly Oh</p>
-                    <p>Yan Zhu</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Timeline</h2>
-                    <p>Winter 2025 (10 weeks)</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Tools</h2>
-                    <p>Figma</p>
-                    <p>Sketchbook</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Skills</h2>
-                    <p>Accessibility Design</p>
-                    <p>User Interviews</p>
-                </div>
-            </div>
 
             <div class="project-section" id="overview">
                 <div class="project-heading">
@@ -124,7 +123,7 @@
                     <h3>Our Participant</h3>
                     <div style="display: flex; gap: 40px; align-items: flex-start; margin: 20px 0;">
                         <div style="flex: 0 0 50%;">
-                            <img src="colorblind.png" alt="Color vision comparison showing normal vision, red-green colorblind, and blue-yellow colorblind views" style="width: 100%; height: auto; border: 1px solid #ccc;">
+                            <img src="assets/project/colorblind.png" alt="Color vision comparison showing normal vision, red-green colorblind, and blue-yellow colorblind views" style="width: 100%; height: auto; border: 1px solid #ccc;">
                         </div>
                         <div style="flex: 1;">
                             <div style="display: flex; align-items: center; margin-bottom: 15px;">
@@ -219,7 +218,7 @@
                             </ul>
                         </div>
                         <div style="flex: 1; background-color: white; padding: 30px;">
-                            <img src="storming.png" alt="Brainstorming session with handwritten notes and sketches of design ideas" style="width: 100%; height: auto; border: 1px solid #ccc;">
+                            <img src="assets/project/storming.png" alt="Brainstorming session with handwritten notes and sketches of design ideas" style="width: 100%; height: auto; border: 1px solid #ccc;">
                         </div>
                     </div>
                     <h3>Design Principles</h3>
@@ -243,26 +242,26 @@
                 <div class="project-content">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0;">
                         <div style="text-align: center;">
-                            <img src="extension.png" alt="Web extension wireframe showing browser extension with color tools" style="width: 100%; height: auto; border: 1px solid #ccc;">
+                            <img src="assets/project/extension.png" alt="Web extension wireframe showing browser extension with color tools" style="width: 100%; height: auto; border: 1px solid #ccc;">
                             <p style="margin: 10px 0 0 0; font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.7; font-style: italic;">Web extension with various tools</p>
                         </div>
                         <div style="text-align: center;">
-                            <img src="color_palette.png" alt="Color palette recommender tool wireframe" style="width: 100%; height: auto; border: 1px solid #ccc;">
+                            <img src="assets/project/color_palette.png" alt="Color palette recommender tool wireframe" style="width: 100%; height: auto; border: 1px solid #ccc;">
                             <p style="margin: 10px 0 0 0; font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.7; font-style: italic;">Color palette recommender tool</p>
                         </div>
                         <div style="text-align: center;">
-                            <img src="eyedropper.png" alt="Eyedropper tool wireframe" style="width: 100%; height: auto; border: 1px solid #ccc;">
+                            <img src="assets/project/eyedropper.png" alt="Eyedropper tool wireframe" style="width: 100%; height: auto; border: 1px solid #ccc;">
                             <p style="margin: 10px 0 0 0; font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.7; font-style: italic;">Eyedropper tool</p>
                         </div>
                         <div style="text-align: center;">
-                            <img src="customizable_browser.png" alt="Customizable browser extension wireframe" style="width: 100%; height: auto; border: 1px solid #ccc;">
+                            <img src="assets/project/customizable_browser.png" alt="Customizable browser extension wireframe" style="width: 100%; height: auto; border: 1px solid #ccc;">
                             <p style="margin: 10px 0 0 0; font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.7; font-style: italic;">Customizable browser extension</p>
                         </div>
                     </div>
                     
                     <h3 style="margin-top: 40px;">Final Storyboard</h3>
                     <div style="text-align: center; margin: 20px 0;">
-                        <img src="web_extension.png" alt="Final storyboard showing web extension design" style="width: 100%; height: auto; border: 1px solid #ccc;">
+                        <img src="assets/project/web_extension.png" alt="Final storyboard showing web extension design" style="width: 100%; height: auto; border: 1px solid #ccc;">
                     </div>
                 </div>
             </div>
@@ -280,79 +279,6 @@
             </div>
 
         </div>
-
-        <script>
-            // Mobile navigation functionality
-            document.addEventListener('DOMContentLoaded', function() {
-                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-                const mobileNav = document.querySelector('.mobile-nav');
-                
-                if (mobileMenuToggle && mobileNav) {
-                    mobileMenuToggle.addEventListener('click', function() {
-                        mobileMenuToggle.classList.toggle('active');
-                        mobileNav.classList.toggle('active');
-                    });
-                    
-                    // Close mobile menu when clicking on a link
-                    const mobileNavLinks = mobileNav.querySelectorAll('a');
-                    mobileNavLinks.forEach(link => {
-                        link.addEventListener('click', function() {
-                            mobileMenuToggle.classList.remove('active');
-                            mobileNav.classList.remove('active');
-                        });
-                    });
-                    
-                    // Close mobile menu when clicking outside
-                    document.addEventListener('click', function(event) {
-                        if (!mobileMenuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
-                            mobileMenuToggle.classList.remove('active');
-                            mobileNav.classList.remove('active');
-                        }
-                    });
-                }
-
-                const sections = Array.from(document.querySelectorAll('.project-section[id]'));
-                const navLinks = Array.from(document.querySelectorAll('.section-nav a'));
-
-                function setActiveNav(id) {
-                    navLinks.forEach(function(link) {
-                        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-                    });
-                }
-
-                if (sections.length && navLinks.length) {
-                    let currentId = sections[0].id;
-                    setActiveNav(currentId);
-
-                    const visibleIds = new Set();
-                    const observer = new IntersectionObserver(function(entries) {
-                        entries.forEach(function(entry) {
-                            if (entry.isIntersecting) {
-                                visibleIds.add(entry.target.id);
-                            } else {
-                                visibleIds.delete(entry.target.id);
-                            }
-                        });
-
-                        if (visibleIds.size) {
-                            sections.forEach(function(section) {
-                                if (visibleIds.has(section.id)) {
-                                    currentId = section.id;
-                                }
-                            });
-                            setActiveNav(currentId);
-                        }
-                    }, {
-                        rootMargin: '-20% 0px -55% 0px',
-                        threshold: 0
-                    });
-
-                    sections.forEach(function(section) {
-                        observer.observe(section);
-                    });
-                }
-            });
-        </script>
 
     </body>
 </html>

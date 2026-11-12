@@ -1,0 +1,27 @@
+<!--
+  BACKUP: previous text-style dock nav markup
+  Copy this into each page to restore the old nav (with styles from dock-nav-text-backup.css).
+
+  Home (active HOME):
+-->
+<nav class="dock-nav" aria-label="Main">
+    <ul>
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="#work">WORK</a></li>
+        <li><a href="aboutme.html">ABOUT</a></li>
+        <li>
+            <a href="resume.pdf" class="dock-nav-resume" target="_blank" aria-label="Resume">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M7 3.5h7.5L19 8v12.5H7z"/>
+                    <path d="M14.5 3.5V8H19"/>
+                    <path d="M10 12h6M10 15.5h6"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!--
+  About (active ABOUT): use index.html#work for WORK, class="active" on ABOUT
+  Project pages (active WORK): class="active" on WORK link to index.html#work
+-->

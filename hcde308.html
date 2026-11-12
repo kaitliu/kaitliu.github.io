@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <style>
             /* Font display swap for Adobe Typekit fonts */
@@ -21,42 +21,63 @@
         </style>
     </head>
 
-    <body class="hcde-page">
+    <body>
 
         <a href="index.html" class="logo">kaityliu</a>
-        
-        <!-- Mobile menu toggle -->
-        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
 
-        <!-- Desktop navigation -->
-        <nav>
+        <nav class="dock-nav" aria-label="Main">
             <ul>
-                <li><a href="aboutme.html">ABOUT ME</a></li>
-                <!-- <li><a href="art.html">ART</a></li> -->
-                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
-                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#work" class="active">WORK</a></li>
+                <li><a href="aboutme.html">ABOUT</a></li>
+                <li>
+                    <a href="resume.pdf" class="dock-nav-resume" target="_blank" aria-label="Resume">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <path d="M7 3.5h7.5L19 8v12.5H7z"/>
+                            <path d="M14.5 3.5V8H19"/>
+                            <path d="M10 12h6M10 15.5h6"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </nav>
-        
-        <!-- Mobile navigation -->
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="aboutme.html">ABOUT ME</a></li>
-                <!-- <li><a href="art.html">ART</a></li> -->
-                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
-                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
-            </ul>
-        </nav> 
 
-        <div class="project-header">
-            <img src="assets/logos/altitude_logo.png" alt="Altitude" style="max-width: 300px; height: auto; display: block; margin: 0 auto;">
-            <!-- <img src="mobile_altitude.png" alt="Altitude Mobile" style="max-width: 150px; height: auto; margin-top: 15px;">
-            <img src="assets/logos/croissant.png" alt="Croissant" style="max-width: 200px; height: auto; margin-left: 20px;">
-            <h2>Food and Drink Festival</h2> -->
+        <div class="project-hero">
+            <aside class="project-meta">
+                <div class="meta-card">
+                    <span class="meta-label">Timeline</span>
+                    <div class="meta-value">
+                        <p>Spring 2025 (10 weeks)</p>
+                    </div>
+                </div>
+                <div class="meta-card">
+                    <h2 class="meta-card-title">Team</h2>
+                    <div class="meta-value">
+                        <p>Solo</p>
+                    </div>
+                </div>
+                <div class="meta-card">
+                    <h2 class="meta-card-title">Detail</h2>
+                    <div class="meta-detail">
+                        <span class="meta-label">Tools</span>
+                        <div class="meta-value">
+                            <p>Figma</p>
+                        </div>
+                        <span class="meta-label">Skills</span>
+                        <div class="meta-value">
+                            <p>UI Design</p>
+                            <p>Personas</p>
+                            <p>User Flows</p>
+                            <p>Wireframing</p>
+                            <p>Prototyping</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="project-header project-header--cover">
+                <img src="altitude cover.png" alt="Altitude cover" class="project-header-cover">
+            </div>
         </div>
 
         <nav class="section-nav">
@@ -71,29 +92,6 @@
         </nav>
 
         <div class="project-container">
-
-            <div class="project-meta">
-                <div class="meta-item">
-                    <h2>Team</h2>
-                    <p>Solo</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Timeline</h2>
-                    <p>Spring 2025 (10 weeks)</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Tools</h2>
-                    <p>Figma</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Skills</h2>
-                    <p>UI Design</p>
-                    <p>Personas</p>
-                    <p>User Flows</p>
-                    <p>Wireframing</p>
-                    <p>Prototyping</p>
-                </div>
-            </div>
 
             <div class="project-section" id="overview">
                 <div class="project-heading">
@@ -118,10 +116,10 @@
                             <th></th>
                             <th>C-ID Night Market</th>
                             <th>Bite of Seattle
-                                <img src="assets/logos/bos-logo.png" alt="Bite of Seattle" style="width: 60%" loading="lazy">
+                                <img src="assets/project/bos-logo.png" alt="Bite of Seattle" style="width: 60%" loading="lazy">
                             </th>
                             <th>Seattle Cocktail Week
-                                <img src="assets/logos/cocktailweek-logo.png" alt="Seattle Cocktail Week" style="width: 60%" loading="lazy">
+                                <img src="assets/project/cocktailweek-logo.png" alt="Seattle Cocktail Week" style="width: 60%" loading="lazy">
                             </th>
                             <th>Altitude</th>
                         </tr>
@@ -189,9 +187,9 @@
                     <h3>Personas</h3>
                     <p>Three participants were interviewed to understand their food and drink preferences, their experience with food festivals, and their thoughts on the design of the festival.</p>
                     <div style="display: flex; flex-direction: column; gap: 20px; align-items: center; margin: 20px 0;">
-                        <img src="persona1.png" alt="Persona 1" style="max-width: 600px; height: auto; border: 1px solid #ccc;" loading="lazy">
-                        <img src="persona2.png" alt="Persona 2" style="max-width: 600px; height: auto; border: 1px solid #ccc;" loading="lazy">
-                        <img src="persona3.png" alt="Persona 3" style="max-width: 600px; height: auto; border: 1px solid #ccc;" loading="lazy">
+                        <img src="assets/project/persona1.png" alt="Persona 1" style="max-width: 600px; height: auto; border: 1px solid #ccc;" loading="lazy">
+                        <img src="assets/project/persona2.png" alt="Persona 2" style="max-width: 600px; height: auto; border: 1px solid #ccc;" loading="lazy">
+                        <img src="assets/project/persona3.png" alt="Persona 3" style="max-width: 600px; height: auto; border: 1px solid #ccc;" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -209,27 +207,27 @@
                     <h3>Wordmark</h3>
                     <p>The wordmark uses Darumadrop One, a rounded display typeface whose soft, irregular edges establish a playful and approachable personality. The imperfect letterforms and hand drawn doodles on each side personify the festival's mission of connecting food enthusiasts with niche vendors.</p>
                     <div style="display: flex; gap: 20px; align-items: flex-start; justify-content: center; flex-wrap: wrap; border: 1px solid #ccc; background: #f5f5f5; padding: 30px; margin: 20px 0;">
-                        <img src="assets/logos/altitude_logo.png" alt="Altitude Wordmark" style="max-width: 250px; height: auto;" loading="lazy">
+                        <img src="assets/project/altitude_logo.png" alt="Altitude Wordmark" style="max-width: 250px; height: auto;" loading="lazy">
                         <div style="display: flex; flex-direction: column; gap: 10px;">
-                            <img src="wordmark_iteration1.png" alt="Wordmark Iteration 1" style="max-width: 150px; height: auto;" loading="lazy">
-                            <img src="wordmark_iteration2.png" alt="Wordmark Iteration 2" style="max-width: 150px; height: auto;" loading="lazy">
+                            <img src="assets/project/wordmark_iteration1.png" alt="Wordmark Iteration 1" style="max-width: 150px; height: auto;" loading="lazy">
+                            <img src="assets/project/wordmark_iteration2.png" alt="Wordmark Iteration 2" style="max-width: 150px; height: auto;" loading="lazy">
                         </div>
                     </div>
                     <h3>Moodboard</h3>
                     <p>The moodboard depicts images that invoke a inviting, calming, and small-scale feeling with simpler design. The playful graphic elements (the simple illustrated cat, hand-drawn napkin designs, and fun typography style) share the same approachable, slightly imperfect quality as the Darumadrop One wordmark representing the core value of the festival.</p>
-                    <img src="assets/projects/other/moodboard.png" alt="moodboard" style="width: 60%; border: 1px solid #ccc;" loading="lazy">
+                    <img src="assets/project/moodboard.png" alt="moodboard" style="width: 60%; border: 1px solid #ccc;" loading="lazy">
                     <h3>Poster</h3>
                     <p>We were tasked to make at least 8 different iterations of our poster under a short time frame (~1 minute per poster), the poster on the left being my final iteration.</p>
                     <p> Darumadrop One was used for the wordmark and Lato for supporting information. A variety of text weights and styles were used to guide viewers through the content such as bold headers are for key information and dates, italics for venue locations, and enlarged sizing for the festival dates themselves. The bold blue wordmark with playful doodles (drink and croissant) integrated into the wordmark along with the picnic design on the bottom communicates the festival's casual, food focused identity and hint at the festival's approachable, exploratory nature. The monochromatic blue palette maintains readability while creating an inviting aesthetic that appeals to adventurous food enthusiasts seeking authentic experiences beyond typical large-scale food events.</p>
                     <div class="poster-layout">
                         <div class="final-poster">
-                            <img src="assets/projects/altitude/final_altitude.png" alt="altitude poster" loading="lazy">
+                            <img src="assets/project/final_altitude.png" alt="altitude poster" loading="lazy">
                         </div>
                         <div class="drafts-grid">
-                            <img src="assets/projects/altitude/altitude_draft1.png" alt="altitude draft 1" loading="lazy">
-                            <img src="assets/projects/altitude/altitude_draft2.png" alt="altitude draft 2" loading="lazy">
-                            <img src="assets/projects/altitude/altitude_draft3.png" alt="altitude draft 3" loading="lazy">
-                            <img src="assets/projects/altitude/altitude_draft4.png" alt="altitude draft 4" loading="lazy">
+                            <img src="assets/project/altitude_draft1.png" alt="altitude draft 1" loading="lazy">
+                            <img src="assets/project/altitude_draft2.png" alt="altitude draft 2" loading="lazy">
+                            <img src="assets/project/altitude_draft3.png" alt="altitude draft 3" loading="lazy">
+                            <img src="assets/project/altitude_draft4.png" alt="altitude draft 4" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -249,9 +247,9 @@
                     <!-- Content for user flow will go here -->
                     <p>For this design, users can browse the festival vendor lineup and view their locations to reduce confusion during the event. Custom filters and tags let users explore vendors by category and save favorites. Since the festival highlights small businesses, there is also a page for new vendors to apply for participation.</p>
                      <h3>User Flow</h3>
-                     <img src="user_flow.png" alt="User Flow" style="max-width: 100%; height: auto; border: 1px solid #ccc;" loading="lazy">
+                     <img src="assets/project/user_flow.png" alt="User Flow" style="max-width: 100%; height: auto; border: 1px solid #ccc;" loading="lazy">
                      <h3>Wireframes</h3>
-                     <img src="wireframe.png" alt="Wireframes" style="max-width: 100%; height: auto; border: 1px solid #ccc;" loading="lazy">
+                     <img src="assets/project/wireframe.png" alt="Wireframes" style="max-width: 100%; height: auto; border: 1px solid #ccc;" loading="lazy">
                 </div>
             </div>
 
@@ -273,7 +271,7 @@
                     <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <img src="prototype.png" alt="Prototype" style="max-width: 100%; height: auto;" loading="lazy">
+                    <img src="assets/project/prototype.png" alt="Prototype" style="max-width: 100%; height: auto;" loading="lazy">
                 </div>
             </div>
 
@@ -287,79 +285,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            // Mobile navigation functionality
-            document.addEventListener('DOMContentLoaded', function() {
-                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-                const mobileNav = document.querySelector('.mobile-nav');
-                
-                if (mobileMenuToggle && mobileNav) {
-                    mobileMenuToggle.addEventListener('click', function() {
-                        mobileMenuToggle.classList.toggle('active');
-                        mobileNav.classList.toggle('active');
-                    });
-                    
-                    // Close mobile menu when clicking on a link
-                    const mobileNavLinks = mobileNav.querySelectorAll('a');
-                    mobileNavLinks.forEach(link => {
-                        link.addEventListener('click', function() {
-                            mobileMenuToggle.classList.remove('active');
-                            mobileNav.classList.remove('active');
-                        });
-                    });
-                    
-                    // Close mobile menu when clicking outside
-                    document.addEventListener('click', function(event) {
-                        if (!mobileMenuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
-                            mobileMenuToggle.classList.remove('active');
-                            mobileNav.classList.remove('active');
-                        }
-                    });
-                }
-
-                const sections = Array.from(document.querySelectorAll('.project-section[id]'));
-                const navLinks = Array.from(document.querySelectorAll('.section-nav a'));
-
-                function setActiveNav(id) {
-                    navLinks.forEach(function(link) {
-                        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-                    });
-                }
-
-                if (sections.length && navLinks.length) {
-                    let currentId = sections[0].id;
-                    setActiveNav(currentId);
-
-                    const visibleIds = new Set();
-                    const observer = new IntersectionObserver(function(entries) {
-                        entries.forEach(function(entry) {
-                            if (entry.isIntersecting) {
-                                visibleIds.add(entry.target.id);
-                            } else {
-                                visibleIds.delete(entry.target.id);
-                            }
-                        });
-
-                        if (visibleIds.size) {
-                            sections.forEach(function(section) {
-                                if (visibleIds.has(section.id)) {
-                                    currentId = section.id;
-                                }
-                            });
-                            setActiveNav(currentId);
-                        }
-                    }, {
-                        rootMargin: '-20% 0px -55% 0px',
-                        threshold: 0
-                    });
-
-                    sections.forEach(function(section) {
-                        observer.observe(section);
-                    });
-                }
-            });
-        </script>
 
     </body>
 </html>

@@ -24,44 +24,67 @@
     <body>
 
         <a href="index.html" class="logo">kaityliu</a>
-        
-        <!-- Mobile menu toggle -->
-        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
 
-        <!-- Desktop navigation -->
-        <nav>
+        <nav class="dock-nav" aria-label="Main">
             <ul>
-                <li><a href="aboutme.html">ABOUT ME</a></li>
-                <!-- <li><a href="art.html">ART</a></li> -->
-                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
-                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Mobile navigation -->
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="aboutme.html">ABOUT ME</a></li>
-                <!-- <li><a href="art.html">ART</a></li> -->
-                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
-                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#work" class="active">WORK</a></li>
+                <li><a href="aboutme.html">ABOUT</a></li>
+                <li>
+                    <a href="resume.pdf" class="dock-nav-resume" target="_blank" aria-label="Resume">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <path d="M7 3.5h7.5L19 8v12.5H7z"/>
+                            <path d="M14.5 3.5V8H19"/>
+                            <path d="M10 12h6M10 15.5h6"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </nav> 
 
-        <div class="project-header">
-            <h1>Shorelight</h1>
-            <h2>Human Centered Game Design</h2>
-            <h3>UX DESIGN • INTERNSHIP • 2024</h3>
+                <div class="project-hero">
+            <aside class="project-meta">
+                <div class="meta-card">
+                    <span class="meta-label">Timeline</span>
+                    <div class="meta-value">
+                        <p>June - August 2025</p>
+                    </div>
+                </div>
+                <div class="meta-card">
+                    <h2 class="meta-card-title">Team</h2>
+                    <div class="meta-value">
+                        <p>Solo</p>
+                    </div>
+                </div>
+                <div class="meta-card">
+                    <h2 class="meta-card-title">Detail</h2>
+                    <div class="meta-detail">
+                        <span class="meta-label">Tools</span>
+                        <div class="meta-value">
+                            <p>GameMaker</p>
+                    <p>Figma</p>
+                    <p>Miro</p>
+                        </div>
+                        <span class="meta-label">Skills</span>
+                        <div class="meta-value">
+                            <p>UX Research</p>
+                    <p>UI Design</p>
+                    <p>User Testing</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="project-header project-header--cover project-header--shorelight">
+            <img src="assets/project/shorelight.png" alt="Shorelight cover" class="project-header-cover">
+        </div>
         </div>
 
-        <nav class="section-nav">
+<nav class="section-nav">
             <ul>
                 <li><a href="#overview">OVERVIEW</a></li>
                 <li><a href="#research">RESEARCH</a></li>
+                <li><a href="#story">STORY</a></li>
                 <li><a href="#design">DESIGN</a></li>
                 <li><a href="#prototyping">PROTOTYPING</a></li>
                 <li><a href="#reflection">REFLECTION</a></li>
@@ -69,31 +92,7 @@
         </nav>
 
         <div class="project-container">
-
-            <div class="project-meta">
-                <div class="meta-item">
-                    <h2>Team</h2>
-                    <p>Solo</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Timeline</h2>
-                    <p>June - August 2025</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Tools</h2>
-                    <p>GameMaker</p>
-                    <p>Figma</p>
-                    <p>Miro</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Skills</h2>
-                    <p>UX Research</p>
-                    <p>UI Design</p>
-                    <p>User Testing</p>
-                </div>
-            </div>
-
-            <div class="project-section" id="overview">
+<div class="project-section" id="overview">
                 <div class="project-heading">
                     <h2>Overview</h2>
                     <hr class="section-hr">
@@ -104,6 +103,24 @@
             </div>
 
             <div class="project-section" id="research">
+                <div class="project-heading">
+                    <h2>Research</h2>
+                    <hr class="section-hr">
+                </div>
+                <div class="project-content">
+                    <div style="text-align: center; margin: 20px 0;">
+                        <img src="cats and soup.png" alt="Cats and Soup reference" style="width: 100%; height: auto;">
+                    </div>
+                    <ul>
+                        <li>idle cozy forest game where cats boil their soup</li>
+                        <li>each station spawns in a new cat which all have their own roles for making soup</li>
+                        <li>earn coins from selling soup which can be used to build more soup prep stations or rest areas for cats</li>
+                        <li>can customize forest and cat outfits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section" id="story">
                 <div class="project-heading">
                     <h2>Story Design</h2>
                     <hr class="section-hr">
@@ -121,17 +138,8 @@
                     <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <p>Design content will go here...</p>
                     <div style="text-align: center; margin: 20px 0;">
-                        <img src="shorelight_home.png" alt="Shorelight home screen design" style="width: 100%; height: auto; border: 1px solid #ccc;">
-                    </div>
-                    <div style="text-align: center; margin: 20px 0;">
-                        <video controls playsinline preload="metadata" poster="shorelight_home.png" style="width: 100%; max-width: 900px; height: auto; border: 1px solid #ccc;">
-                            <source src="shorelight_gameplay.mp4" type="video/mp4">
-                            <source src="shorelight_gameplay.webm" type="video/webm">
-                            <source src="shorelight_gameplay.mov" type="video/quicktime">
-                            Your browser does not support the video tag.
-                        </video>
+                        <img src="shorelight_home.png" alt="Shorelight home screen design" style="width: 100%; height: auto;">
                     </div>
                 </div>
             </div>
@@ -142,7 +150,6 @@
                     <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <p>Prototyping content will go here...</p>
                 </div>
             </div>
 
@@ -152,84 +159,9 @@
                     <hr class="section-hr">
                 </div>
                 <div class="project-content">
-                    <p>Reflection content will go here...</p>
                 </div>
             </div>
 
         </div>
 
-        <script>
-            // Mobile navigation functionality
-            document.addEventListener('DOMContentLoaded', function() {
-                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-                const mobileNav = document.querySelector('.mobile-nav');
-                
-                if (mobileMenuToggle && mobileNav) {
-                    mobileMenuToggle.addEventListener('click', function() {
-                        mobileMenuToggle.classList.toggle('active');
-                        mobileNav.classList.toggle('active');
-                    });
-                    
-                    // Close mobile menu when clicking on a link
-                    const mobileNavLinks = mobileNav.querySelectorAll('a');
-                    mobileNavLinks.forEach(link => {
-                        link.addEventListener('click', function() {
-                            mobileMenuToggle.classList.remove('active');
-                            mobileNav.classList.remove('active');
-                        });
-                    });
-                    
-                    // Close mobile menu when clicking outside
-                    document.addEventListener('click', function(event) {
-                        if (!mobileMenuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
-                            mobileMenuToggle.classList.remove('active');
-                            mobileNav.classList.remove('active');
-                        }
-                    });
-                }
-
-                const sections = Array.from(document.querySelectorAll('.project-section[id]'));
-                const navLinks = Array.from(document.querySelectorAll('.section-nav a'));
-
-                function setActiveNav(id) {
-                    navLinks.forEach(function(link) {
-                        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-                    });
-                }
-
-                if (sections.length && navLinks.length) {
-                    let currentId = sections[0].id;
-                    setActiveNav(currentId);
-
-                    const visibleIds = new Set();
-                    const observer = new IntersectionObserver(function(entries) {
-                        entries.forEach(function(entry) {
-                            if (entry.isIntersecting) {
-                                visibleIds.add(entry.target.id);
-                            } else {
-                                visibleIds.delete(entry.target.id);
-                            }
-                        });
-
-                        if (visibleIds.size) {
-                            sections.forEach(function(section) {
-                                if (visibleIds.has(section.id)) {
-                                    currentId = section.id;
-                                }
-                            });
-                            setActiveNav(currentId);
-                        }
-                    }, {
-                        rootMargin: '-20% 0px -55% 0px',
-                        threshold: 0
-                    });
-
-                    sections.forEach(function(section) {
-                        observer.observe(section);
-                    });
-                }
-            });
-        </script>
-
-    </body>
-</html>
+        <script

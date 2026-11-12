@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>kaitlyn liu</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+        <link rel="stylesheet" href="https://use.typekit.net/ufm8mvs.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            /* Font display swap for Adobe Typekit fonts */
+            @font-face {
+                font-family: "ivypresto-display";
+                font-display: swap;
+            }
+        </style>
     </head>
 
     <body class="art-page">
             <a href="index.html" class="logo">kaityliu</a>
+            
+            <!-- Mobile menu toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Desktop navigation -->
             <nav>
+                <ul>
+                    <li><a href="aboutme.html">ABOUT ME</a></li>
+                    <li><a href="art.html">ART</a></li>
+                    <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
+                    <li><a href="resume.pdf" target="_blank">RESUME</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile navigation -->
+            <nav class="mobile-nav">
                 <ul>
                     <li><a href="aboutme.html">ABOUT ME</a></li>
                     <li><a href="art.html">ART</a></li>
@@ -24,63 +54,93 @@
             <div class="art-grid">
                 <div class="art-item">
                     <picture>
-                        <source type="image/webp" srcset="images/webp/small/paddleboard.webp 400w, images/webp/medium/paddleboard.webp 800w" sizes="(max-width: 600px) 400px, 800px">
-                        <img src="images/optimized/paddleboard.jpg" alt="paddleboarding" loading="lazy">
+                        <source type="image/webp" srcset="assets/art/webp/small/paddleboard.webp 400w, assets/art/webp/medium/paddleboard.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="assets/art/optimized/paddleboard.jpg" alt="paddleboarding" loading="lazy">
                     </picture>
                     <p class="art-caption">Paddleboarding</p>
                 </div>
                 <div class="art-item">
                     <picture>
-                        <source type="image/webp" srcset="images/webp/small/fishbowl.webp 400w, images/webp/medium/fishbowl.webp 800w" sizes="(max-width: 600px) 400px, 800px">
-                        <img src="images/optimized/fishbowl.jpg" alt="fishbowl style with girl and sunset" loading="lazy">
+                        <source type="image/webp" srcset="assets/art/webp/small/fishbowl.webp 400w, assets/art/webp/medium/fishbowl.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="assets/art/optimized/fishbowl.jpg" alt="fishbowl style with girl and sunset" loading="lazy">
                     </picture>
                     <p class="art-caption">Fishbowl Style</p>
                 </div>
                 <div class="art-item">
                     <picture>
-                        <source type="image/webp" srcset="images/webp/small/canyons.webp 400w, images/webp/medium/canyons.webp 800w" sizes="(max-width: 600px) 400px, 800px">
-                        <img src="images/optimized/canyons.jpeg" alt="canyons and dragon" loading="lazy">
+                        <source type="image/webp" srcset="assets/art/webp/small/canyons.webp 400w, assets/art/webp/medium/canyons.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="assets/art/optimized/canyons.jpeg" alt="canyons and dragon" loading="lazy">
                     </picture>
                     <p class="art-caption">Canyons & Dragon</p>
                 </div>
                 <div class="art-item">
                     <picture>
-                        <source type="image/webp" srcset="images/webp/small/charcoal.webp 400w, images/webp/medium/charcoal.webp 800w" sizes="(max-width: 600px) 400px, 800px">
-                        <img src="images/optimized/charcoal.jpg" alt="charcoal drawing" loading="lazy">
+                        <source type="image/webp" srcset="assets/art/webp/small/charcoal.webp 400w, assets/art/webp/medium/charcoal.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="assets/art/optimized/charcoal.jpg" alt="charcoal drawing" loading="lazy">
                     </picture>
                     <p class="art-caption">Charcoal Drawing</p>
                 </div>
                 <div class="art-item">
                     <picture>
-                        <source type="image/webp" srcset="images/webp/small/flower.webp 400w, images/webp/medium/flower.webp 800w" sizes="(max-width: 600px) 400px, 800px">
-                        <img src="flower.png" alt="flowers" loading="lazy">
+                        <source type="image/webp" srcset="assets/art/webp/small/flower.webp 400w, assets/art/webp/medium/flower.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="assets/decorative/flower.png" alt="flowers" loading="lazy">
                     </picture>
                     <p class="art-caption">Flowers</p>
                 </div>
                 <div class="art-item">
                     <picture>
-                        <source type="image/webp" srcset="images/webp/small/stained-glass.webp 400w, images/webp/medium/stained-glass.webp 800w" sizes="(max-width: 600px) 400px, 800px">
-                        <img src="images/optimized/stained-glass.jpg" alt="stained glass" loading="lazy">
+                        <source type="image/webp" srcset="assets/art/webp/small/stained-glass.webp 400w, assets/art/webp/medium/stained-glass.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="assets/art/optimized/stained-glass.jpg" alt="stained glass" loading="lazy">
                     </picture>
                     <p class="art-caption">Stained Glass</p>
                 </div>
                 <div class="art-item">
                     <picture>
-                        <source type="image/webp" srcset="images/webp/small/ceramic-bear.webp 400w, images/webp/medium/ceramic-bear.webp 800w" sizes="(max-width: 600px) 400px, 800px">
-                        <img src="images/optimized/ceramic-bear.jpg" alt="ceramic bear" loading="lazy">
+                        <source type="image/webp" srcset="assets/art/webp/small/ceramic-bear.webp 400w, assets/art/webp/medium/ceramic-bear.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="assets/art/optimized/ceramic-bear.jpg" alt="ceramic bear" loading="lazy">
                     </picture>
                     <p class="art-caption">Ceramic Bear</p>
                 </div>
                 <div class="art-item">
                     <picture>
-                        <source type="image/webp" srcset="images/webp/small/wood.webp 400w, images/webp/medium/wood.webp 800w" sizes="(max-width: 600px) 400px, 800px">
-                        <img src="images/optimized/wood.jpg" alt="wood" loading="lazy">
+                        <source type="image/webp" srcset="assets/art/webp/small/wood.webp 400w, assets/art/webp/medium/wood.webp 800w" sizes="(max-width: 600px) 400px, 800px">
+                        <img src="assets/art/optimized/wood.jpg" alt="wood" loading="lazy">
                     </picture>
                     <p class="art-caption">Wood Sculpture</p>
                 </div>
             </div>
 
-
+        <script>
+            // Mobile navigation functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+                const mobileNav = document.querySelector('.mobile-nav');
+                
+                if (mobileMenuToggle && mobileNav) {
+                    mobileMenuToggle.addEventListener('click', function() {
+                        mobileMenuToggle.classList.toggle('active');
+                        mobileNav.classList.toggle('active');
+                    });
+                    
+                    // Close mobile menu when clicking on a link
+                    const mobileNavLinks = mobileNav.querySelectorAll('a');
+                    mobileNavLinks.forEach(link => {
+                        link.addEventListener('click', function() {
+                            mobileMenuToggle.classList.remove('active');
+                            mobileNav.classList.remove('active');
+                        });
+                    });
+                    
+                    // Close mobile menu when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!mobileMenuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
+                            mobileMenuToggle.classList.remove('active');
+                            mobileNav.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
             

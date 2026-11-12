@@ -1,0 +1,81 @@
+/*
+ * BACKUP: previous text-style bottom dock nav
+ * To restore: replace the current .dock-nav rules in styles.css with
+ * the rules below, and swap each page's dock-nav HTML back to text links
+ * (see dock-nav-text-backup.html).
+ */
+
+.dock-nav {
+    position: fixed;
+    bottom: 28px;
+    left: 28px;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    background: #f3f3f1;
+    border: 1px solid #d8d8d6;
+    border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.dock-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    justify-content: flex-start;
+}
+
+.dock-nav a {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    padding: 10px 14px;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.dock-nav a:hover {
+    color: #222;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.dock-nav a.active {
+    background-color: #d8d8d6;
+    color: #222;
+}
+
+.dock-nav a.dock-nav-resume {
+    padding: 8px 12px;
+}
+
+.dock-nav a.dock-nav-resume svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .dock-nav {
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      width: fit-content;
+      max-width: calc(100vw - 32px);
+    }
+
+    .dock-nav a {
+      font-size: 0.7rem;
+      padding: 8px 10px;
+    }
+}

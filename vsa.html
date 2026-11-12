@@ -10,10 +10,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <style>
-            /* Font display swap for Adobe Typekit fonts */
             @font-face {
                 font-family: "ivypresto-display";
                 font-display: swap;
@@ -24,41 +23,56 @@
     <body>
 
         <a href="index.html" class="logo">kaityliu</a>
-        
-        <!-- Mobile menu toggle -->
-        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
 
-        <!-- Desktop navigation -->
-        <nav>
+        <nav class="dock-nav" aria-label="Main">
             <ul>
-                <li><a href="aboutme.html">ABOUT ME</a></li>
-                <!-- <li><a href="art.html">ART</a></li> -->
-                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
-                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#work" class="active">WORK</a></li>
+                <li><a href="aboutme.html">ABOUT</a></li>
+                <li>
+                    <a href="resume.pdf" class="dock-nav-resume" target="_blank" aria-label="Resume">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <path d="M7 3.5h7.5L19 8v12.5H7z"/>
+                            <path d="M14.5 3.5V8H19"/>
+                            <path d="M10 12h6M10 15.5h6"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </nav>
-        
-        <!-- Mobile navigation -->
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="aboutme.html">ABOUT ME</a></li>
-                <!-- <li><a href="art.html">ART</a></li> -->
-                <li><a href="https://www.linkedin.com/in/kaitliu/" target="_blank">LINKEDIN</a></li>
-                <li><a href="resume.pdf" target="_blank">RESUME</a></li>
-            </ul>
-        </nav> 
 
-        <div class="outlined-box">
-            <img src="assets/decorative/scrapbook_yellow.png" alt="Yellow gingham corner" class="scrapbook-corner">
-            <img src="assets/decorative/cat.png" alt="Cat" class="cat-image">
-            <div class="vsa-images">
-                <img src="vsa_tshirt_back.png" alt="VSA t-shirts" class="vsa-tshirts">
-                <img src="assets/projects/vsa/vsa_card_front.png" alt="VSA card front" class="vsa-card-front">
-                <img src="assets/projects/vsa/vsa_card_back.png" alt="VSA card back" class="vsa-card-back">
+        <div class="project-hero">
+            <aside class="project-meta">
+                <div class="meta-card">
+                    <span class="meta-label">Timeline</span>
+                    <div class="meta-value">
+                        <p>July 2025 - Current</p>
+                    </div>
+                </div>
+                <div class="meta-card">
+                    <h2 class="meta-card-title">Team</h2>
+                    <div class="meta-value">
+                        <p>Solo</p>
+                    </div>
+                </div>
+                <div class="meta-card">
+                    <h2 class="meta-card-title">Detail</h2>
+                    <div class="meta-detail">
+                        <span class="meta-label">Tools</span>
+                        <div class="meta-value">
+                            <p>Figma</p>
+                            <p>Sketchbook</p>
+                        </div>
+                        <span class="meta-label">Skills</span>
+                        <div class="meta-value">
+                            <p>Graphic Design</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="project-header project-header--cover">
+                <img src="graphic designer cover.png" alt="VSA graphic designer cover" class="project-header-cover">
             </div>
         </div>
 
@@ -74,28 +88,6 @@
         </nav>
 
         <div class="project-container">
-
-            <div class="project-meta">
-                <div class="meta-item">
-                    <h2>Team</h2>
-                    <p>Solo</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Timeline</h2>
-                    <p>July 2025 - Current</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Tools</h2>
-                    <p>Figma</p>
-                    <p>Sketchbook</p>
-                </div>
-                <div class="meta-item">
-                    <h2>Skills</h2>
-                    <p>Graphic Design</p>
-                </div>
-            </div>
-
-
             <div class="project-section" id="overview">
                 <div class="project-heading">
                     <h2>Overview</h2>
@@ -177,83 +169,14 @@
                         <img src="gen officer apps.png" alt="VSA General Officer applications graphic">
                         <img src="gen officer apps round 2.png" alt="VSA General Officer applications round 2 graphic">
                         <img src="MEDIA reveal.png" alt="VSA Media Team Officer Reveal graphic">
+                        <img src="media slide 1.png" alt="VSA Media Chair and Media Advisor officer reveal">
+                        <img src="media slide 2.png" alt="VSA officer reveal graphic 2">
+                        <img src="media slide 3.png" alt="VSA officer reveal graphic 3">
+                        <img src="media slide 4.png" alt="VSA officer reveal graphic 4">
                     </div>
                 </div>
             </div>
         </div>
-
-        <script>
-            // Mobile navigation functionality
-            document.addEventListener('DOMContentLoaded', function() {
-                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-                const mobileNav = document.querySelector('.mobile-nav');
-                
-                if (mobileMenuToggle && mobileNav) {
-                    mobileMenuToggle.addEventListener('click', function() {
-                        mobileMenuToggle.classList.toggle('active');
-                        mobileNav.classList.toggle('active');
-                    });
-                    
-                    // Close mobile menu when clicking on a link
-                    const mobileNavLinks = mobileNav.querySelectorAll('a');
-                    mobileNavLinks.forEach(link => {
-                        link.addEventListener('click', function() {
-                            mobileMenuToggle.classList.remove('active');
-                            mobileNav.classList.remove('active');
-                        });
-                    });
-                    
-                    // Close mobile menu when clicking outside
-                    document.addEventListener('click', function(event) {
-                        if (!mobileMenuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
-                            mobileMenuToggle.classList.remove('active');
-                            mobileNav.classList.remove('active');
-                        }
-                    });
-                }
-
-                const sections = Array.from(document.querySelectorAll('.project-section[id]'));
-                const navLinks = Array.from(document.querySelectorAll('.section-nav a'));
-
-                function setActiveNav(id) {
-                    navLinks.forEach(function(link) {
-                        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-                    });
-                }
-
-                if (sections.length && navLinks.length) {
-                    let currentId = sections[0].id;
-                    setActiveNav(currentId);
-
-                    const visibleIds = new Set();
-                    const observer = new IntersectionObserver(function(entries) {
-                        entries.forEach(function(entry) {
-                            if (entry.isIntersecting) {
-                                visibleIds.add(entry.target.id);
-                            } else {
-                                visibleIds.delete(entry.target.id);
-                            }
-                        });
-
-                        if (visibleIds.size) {
-                            sections.forEach(function(section) {
-                                if (visibleIds.has(section.id)) {
-                                    currentId = section.id;
-                                }
-                            });
-                            setActiveNav(currentId);
-                        }
-                    }, {
-                        rootMargin: '-20% 0px -55% 0px',
-                        threshold: 0
-                    });
-
-                    sections.forEach(function(section) {
-                        observer.observe(section);
-                    });
-                }
-            });
-        </script>
 
     </body>
 </html>
